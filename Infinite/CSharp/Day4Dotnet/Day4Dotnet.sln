@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day4Dotnet", "Day4Dotnet\Day4Dotnet.csproj", "{63784357-4CC6-44FC-B55F-15CD4BB07243}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day4DotNet_Prj2", "Day4DotNet_Prj2\Day4DotNet_Prj2.csproj", "{44B16381-9FA3-4EE9-97D6-DA7C9D4F237E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63784357-4CC6-44FC-B55F-15CD4BB07243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63784357-4CC6-44FC-B55F-15CD4BB07243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63784357-4CC6-44FC-B55F-15CD4BB07243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63784357-4CC6-44FC-B55F-15CD4BB07243}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44B16381-9FA3-4EE9-97D6-DA7C9D4F237E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44B16381-9FA3-4EE9-97D6-DA7C9D4F237E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44B16381-9FA3-4EE9-97D6-DA7C9D4F237E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44B16381-9FA3-4EE9-97D6-DA7C9D4F237E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14BF7FD3-EB6E-4934-8A2A-81D4ACB41187}
+	EndGlobalSection
+EndGlobal

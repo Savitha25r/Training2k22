@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "ViewMethod";
+}
+
+<h2>ViewMethod</h2>
+@* Using the razor syntax to diplay the elements in the collection object passed 
+    by the controllers action method to this view*@
+    @foreach(var item in Model)
+                {
+                    <p>@item</p>
+                }
+

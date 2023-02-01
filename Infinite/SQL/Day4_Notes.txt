@@ -1,0 +1,68 @@
+Transactions : Are sql statements that are executed together as one 
+
+It consists of DML statements, DQL statements
+Can have a DDL statement
+Can have a DCL statement
+
+Begins when the first DML statement is executed
+Ends when any one of the following events happen
+    A commit or a Rollback statement
+    An auto commit statement is encountered
+    The user exits
+    System crashes
+
+Transaction management ensures
+  Data consistency
+  Preview data changes before and after making changes   permanent
+  Grouping related operations
+
+Save Points : are logical markers/blocks of a set of statements in a transaction
+It is not ANSI standard sql
+
+rank() - that assigns a rank number to each row
+rank with partition - the rows within a partition which have the same values have to receive the same rank 
+
+
+Locks : 1. Shared Lock 2. Exclusive Lock
+
+A -  Atomicity
+C -  Consistency
+I -  Isolation
+D -  Durability
+
+
+
+Stored Procedure : Reusable set of sql statements with a name. which is stored as an object inside the database schema.
+
+The statements query plan also gets saved along with the procedure, hence the execution time is less
+
+They can take input parameters, give output parameters and also one return type 
+
+The return type of all procedures is int
+
+Syntax : create procedure <procedure name> as
+         begin
+         any valid sql statement/s
+         end
+
+Functions : Are also like procedures. But they do not have any output parameters. They can take one or more input parameters. They will return any one scalar data type
+
+Functions are broadly of 2 types viz.
+  1. Scalar valued function (returns one scalar datatype)
+  2. Table Valued Function (returns multiple data -rows/cols)
+       a. Inline Table valued functions.(returns a table. Is not enclosed with begin and end keyword. They are used in where and join clauses 
+       b. Multi Statement table valued functions
+
+
+Difference between  Functions and Procedures
+
+Functions must return a value, where as procedure need not return 
+Functions have only input parameters, where as procedures have input, output parameters
+Functions can be used only to perform select operations, where as procedures can perform insert,update,delete, select operations
+Functions do not support transaction management or exception handling, where as procedures support both
+Functions can call other functions, but not procedures, where as procedures can call other procedures and functions
+Functions are executed only in select statement, where as procedures are executed using exec/execute command
+
+
+
+

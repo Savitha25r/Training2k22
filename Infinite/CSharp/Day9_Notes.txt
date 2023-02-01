@@ -1,0 +1,73 @@
+Garbage Collection Algorithm
+- Mark and Sweep
+
+When an object is created, its mark bit is  set to 0(false)
+
+Benefits: GC succeeds in allocation objects efficiently on the heap memory using the generations
+-GC handles memory allocation safely so that no objects use the contents of another object even by mistake
+-Manual Releasing of memory is not required as GC automatically releases the memory 
+
+Dispose 			vs			 Finalize
+-Usually called by our code	    Called by the GC before an object that is eligible for collection is reclaimed
+
+
+
+
+GC.Collect() - Avoid calling this method
+Instead call Dispose() or use using{}
+using(    )
+{
+
+
+
+
+} 
+
+Indexers : Are also known as Smart Arrays. They allow an object to be indexed like an array
+- They are some what similar to properties, as they also have get and set accessors. But the way these accessors operate is different from properties
+- They do not have names like properties, instead use the this keyword 
+- They can be overloaded
+- We should give index values accordingly while setting or getting data from the indexers
+
+Collections: Are specialized classes for storage and retrieval of multiple data
+- They serve in allocating memory dynamically and accessing the data both directly or with the help of index
+
+Collections 				 vs							 Arrays 
+
+Dynamic size                                 				Fixed Size
+Some collections can store multiple types of data 			Same type of Data
+Manipulating data is easy							     Manipulating involves shifting, and it is tedious
+
+ArrayList : multiple data types. Sorting is a drawback with multiple data types
+HashTable : Key value Pair, Uses hashing Technique to sort the keys. Useful for retrieval of data. Keys cannot be null or duplicate. It has to be unique. Values can be null or duplicates 
+SortedList : is also a Key Value pair collection, where the keys are sorted chronolically
+Stacks : Last in - First out (LIFO) 
+Queues : Fisrt in - First out (FIFO)
+
+
+Generics: Collections that allows to create classes and methods decoupled with Data types
+- Are a way to let us define type-safe classes without compromising  
+                       - type safety
+                       - performance
+                       - productivity
+List<T>  - T stands for a template which is a data type
+
+Collection           Generic
+
+Arraylist --------- List 
+Hashtable --------- Dictionary
+
+
+Dynamic Link Libraries: DLL's : Are library assemblies that are created once and used manytimes.
+- It is a set of classes and functions
+- They cannot be executed directly.
+- They need a host to test and execute the functionalities of the DLL (eg : an exe)
+- They have to be referenced in the application/assembly that wants to use the DLL, create objects and 
+call the functions
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Day2Views_Prj.Models.Department>
+@{
+    ViewBag.Title = "DepartmentList";
+}
+
+<h2>DepartmentList</h2>
+
+<table class=" table table-bordered">
+    <thead>
+        <tr>
+            <th>Department Id</th>
+            <th>Department Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Did</td>
+                <td>@item.Deptname</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

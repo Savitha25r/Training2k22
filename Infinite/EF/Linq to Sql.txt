@@ -1,0 +1,53 @@
+Advantages : 
+
+There are many advantages when we use ORM in our projects. Below are few,
+
+1. You can query the database object treating it as a .net object using .net language.
+
+2. Your data access development will be easier.
+
+3. It handles the SQL injection attacks automatically.
+
+4. You will get type safety and compiler advantages since the database objects are managed as .net object.
+
+5. Using Visual Studio provides you intellisense support and other tools for developing the LINQ to SQL classes
+
+
+What is LINQ TO SQL ?
+
+LINQ to SQL is new component that was introduced with .NetFramework 3.5. LINQ to SQL provides a way where a developer can manage a relational database object as a .net object. In simple terms, it is an ORM (Object-relational mapping) that is used to manage a back end object as a front end object in object oriented way i.e. relational to object oriented type system.
+
+We can query, insert, update and delete the underlying database object with LINQ to SQL classes.  When we query or update or delete these .net objects, LINQ to SQL will automatically take care of the operations in underlying relational data objects.
+
+ 
+
+
+LINQ to SQL uses LINQ as querying technique to query the database object through the LINQ to SQL.
+
+Advantages of Linq : 
+
+1. Familiar Lang.
+2. Less Coding
+3. Readable code
+4. Standardized way of querying data sources
+5. Compile Time safety
+6. Intellisense support
+
+1. Linq to Objects (Arrays/Collections)
+2. Linq to Entities (ORM)
+3. Linq to SQL (Objects can be generated also with a tool called as SQLmetal.exe 
+
+What is SqlMetal : It is a commnad line code generation tool, that is used to generate Linq-Sql classes
+There are 2 ways to generate Linq-Sql classes
+  1. Visual Studio
+  2. SqlMetal.exe
+The path is as below:
+ C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools
+
+1. we need to run the sqlmetal.exe commands only in the Visual Studio Developer  command promt as an administrator
+2. in c:\  create a new folder. Give it a meaningful name(myDBML)
+3. Type the command
+
+SqlMetal.exe /server:localhost /database:Northwind /dbml:c:\myDBML\Northwind.dbml /namespace:OurDemo /Context:NorthwindContext
+
+observer the .dbml file getting created in the specified folder

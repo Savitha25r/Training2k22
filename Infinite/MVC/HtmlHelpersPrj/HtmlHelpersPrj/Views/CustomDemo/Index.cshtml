@@ -1,0 +1,26 @@
+﻿@using HtmlHelpersPrj.CustomHelpers
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<h1> Extension Method</h1>
+<p>
+    @Html.LabelWithItalics("Ext Method in Red Color")
+    @Html.LabelinGreen("Green Extension")
+</p>
+<hr/>
+<h1>Static Helper</h1>
+<p>
+    @CustomHelper.LabelWithMark("Static Helper")
+
+</p>
+<hr/>
+<h1>Helper Razor</h1>
+@helper LabelwithRazor(string Content)
+    {
+      <label><b><del><sup>@Content</sup></del></b></label>
+    }
+<p>
+    @LabelwithRazor("This is Razor Syntax Helper")
+</p>

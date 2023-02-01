@@ -1,0 +1,6 @@
+C:\Banu\Infinite\CSharp\Day4Dotnet\Day4Dotnet\bin\Debug\Day4Dotnet.exe.config
+C:\Banu\Infinite\CSharp\Day4Dotnet\Day4Dotnet\bin\Debug\Day4Dotnet.exe
+C:\Banu\Infinite\CSharp\Day4Dotnet\Day4Dotnet\bin\Debug\Day4Dotnet.pdb
+C:\Banu\Infinite\CSharp\Day4Dotnet\Day4Dotnet\obj\Debug\Day4Dotnet.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\CSharp\Day4Dotnet\Day4Dotnet\obj\Debug\Day4Dotnet.exe
+C:\Banu\Infinite\CSharp\Day4Dotnet\Day4Dotnet\obj\Debug\Day4Dotnet.pdb

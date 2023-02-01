@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Day3EFPrj.Models.Order>
+@{
+    ViewBag.Title = "CustEmp_Ord_Details";
+}
+
+<h2>Data from Multiple Tables</h2>
+<h2>Customer, Employee, Orders and Shippers</h2>
+@foreach(var item in Model)
+            {
+                <ul>
+                    <li>Order Id : @item.OrderID</li>
+                    <li>Order Date :@item.OrderDate</li>
+                    <li>Customer Id:@item.CustomerID</li>
+                    <li>CO. Name:@item.Customer.CompanyName</li>
+                    <li>Employee Id:@item.EmployeeID</li>
+                    <li>Employee Name:@item.Employee.FirstName</li>
+                    <li>Shipper Name:@item.Shipper.CompanyName</li>
+                    
+                </ul>
+            }
+

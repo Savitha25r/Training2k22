@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        Say What ?<input id="saythis" size="40">
+        How many times? <select id="howmany">
+            <option value="0">select</option>
+            <option value="1">1</option>
+            <option value="5" selected>5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+        </select>
+      <button onclick="doLoop()">Do It!</button>
+      <div id="results"></div>
+      <script>
+        function doLoop(){
+            var saywhat=document.getElementById('saythis').value;
+            var maxloop=document.getElementById('howmany').value;
+            var str=' ';
+            for(var i=1;(i<=maxloop);i++)
+            {
+                str=str+i+':'+saywhat+'<br/>';
+            }
+            document.getElementById("results").innerHTML=str;
+        }
+      </script>
+    </body>
+</html>

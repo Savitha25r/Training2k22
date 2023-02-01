@@ -1,0 +1,7 @@
+C:\Banu\Infinite\EF\LinqToSql\LinqToSql\bin\Debug\LinqToSql.exe.config
+C:\Banu\Infinite\EF\LinqToSql\LinqToSql\bin\Debug\LinqToSql.exe
+C:\Banu\Infinite\EF\LinqToSql\LinqToSql\bin\Debug\LinqToSql.pdb
+C:\Banu\Infinite\EF\LinqToSql\LinqToSql\obj\Debug\LinqToSql.csproj.AssemblyReference.cache
+C:\Banu\Infinite\EF\LinqToSql\LinqToSql\obj\Debug\LinqToSql.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\EF\LinqToSql\LinqToSql\obj\Debug\LinqToSql.exe
+C:\Banu\Infinite\EF\LinqToSql\LinqToSql\obj\Debug\LinqToSql.pdb

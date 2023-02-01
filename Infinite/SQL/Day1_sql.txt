@@ -1,0 +1,21 @@
+create database InfiniteDB
+
+use InfiniteDB
+
+--creating a table
+create table Department
+(DeptId int primary key,
+DeptName varchar(20) not null,    -- required field
+Budget float                      -- not required field
+)
+
+create table Employee
+(Empid int primary key,
+Empname varchar(30),
+Salary float,
+Gender char(7),
+DeptId int foreign key references Department(DeptId))
+
+--to check the table structure
+sp_help Employee
+sp_help Department

@@ -1,0 +1,7 @@
+C:\Banu\Infinite\CSharp\Lang_Enhancements2\Lang_Enhancements2\bin\Debug\Lang_Enhancements2.exe.config
+C:\Banu\Infinite\CSharp\Lang_Enhancements2\Lang_Enhancements2\bin\Debug\Lang_Enhancements2.exe
+C:\Banu\Infinite\CSharp\Lang_Enhancements2\Lang_Enhancements2\bin\Debug\Lang_Enhancements2.pdb
+C:\Banu\Infinite\CSharp\Lang_Enhancements2\Lang_Enhancements2\obj\Debug\Lang_Enhancements2.csproj.AssemblyReference.cache
+C:\Banu\Infinite\CSharp\Lang_Enhancements2\Lang_Enhancements2\obj\Debug\Lang_Enhancements2.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\CSharp\Lang_Enhancements2\Lang_Enhancements2\obj\Debug\Lang_Enhancements2.exe
+C:\Banu\Infinite\CSharp\Lang_Enhancements2\Lang_Enhancements2\obj\Debug\Lang_Enhancements2.pdb

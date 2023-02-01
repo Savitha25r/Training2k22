@@ -1,0 +1,5 @@
+C:\Banu\Infinite\CSharp\MStestMainDll\MStestMainDll\bin\Debug\MStestMainDll.dll
+C:\Banu\Infinite\CSharp\MStestMainDll\MStestMainDll\bin\Debug\MStestMainDll.pdb
+C:\Banu\Infinite\CSharp\MStestMainDll\MStestMainDll\obj\Debug\MStestMainDll.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\CSharp\MStestMainDll\MStestMainDll\obj\Debug\MStestMainDll.dll
+C:\Banu\Infinite\CSharp\MStestMainDll\MStestMainDll\obj\Debug\MStestMainDll.pdb

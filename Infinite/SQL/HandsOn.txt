@@ -1,0 +1,3 @@
+1. UpdateEmployee - either salary or phone or both
+
+2. modify the DeleteEmployee() to handle not matching employee code

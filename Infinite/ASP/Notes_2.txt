@@ -1,0 +1,70 @@
+
+Events that get triggered
+
+Aplication_start() - If appln is not already running, and if a request is received by the server
+
+Session_Start()- when a new user invokes the sefrver application. Unique instance of the browser (session_id)
+
+session_end()-session times out or user logs out.
+
+Application_error()- to handle exceptions at the appplication level
+
+Application_Events - Global data
+
+Session_Events- initialize data that needs to be available only for that user session
+
+Http protocol is a stateless protocol
+
+Statemanagement : The ability to retain the state of the page(values in various controls).
+
+Manage the state in the application using techniques as below:
+
+Client Side Techniques	    Server Side Techn.
+
+1. ViewState				1. Session State
+2. Hidden Fields			2. Application State
+3. Cookies
+4. Query Strings
+
+
+1. ViewState : A variable not typecasted. Is a dictionary object that can store any data. 
+-Any UDT(User Defined Type) can be stored.
+-It is stored in the client side
+-Can retain the state (values of the controls) across multiple post backs of the same page
+
+Note: In general all asp controls(<asp:>) have a default viewstate variable
+
+
+2. Hidden Field : is a control as a part of the tool box, which is not visible at the runtime
+-Through hiddenfields we can store the data
+-Like ViewStatate, Hidden fields can also maintain the state only within the sames page's postback
+
+Hidden field is a class, which has to be initialized and all members to be initialized. This can pose a load on the system, where as a viewstate is a variable that does not load the system. 
+
+When we need to maintain the state of many controls, use viewstate. In case we need to maintain the state of few controls, then we may use hidden fields
+
+3. Cookies : used when we want the data to be travelling between pages (across pages)
+
+are of 2 types
+		1. Persistant cookie ( uses a httpcookie object- collection of data)
+		2. non-persistant cookie (does not use any cookie object, instead stores directly into response and request objects)
+
+4. Query String- symbols like these are used ? %). It is an url which is visible on the address bar. hence no sensitive should be passes using query string. Small and not very sensitive data can be sent via query string.
+
+
+5. Session State:
+
+6. Application State: 
+
+Global.asax : is also knwon as ASP.Net application file
+
+
+Master Page: allows to create a consistent look and behaviour for all the pages of the application
+
+
+
+
+
+
+
+

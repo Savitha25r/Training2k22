@@ -1,0 +1,6 @@
+C:\Banu\Infinite\CSharp\BaseLib\BaseLib\bin\Debug\BaseLib.dll
+C:\Banu\Infinite\CSharp\BaseLib\BaseLib\bin\Debug\BaseLib.pdb
+C:\Banu\Infinite\CSharp\BaseLib\BaseLib\obj\Debug\BaseLib.csproj.AssemblyReference.cache
+C:\Banu\Infinite\CSharp\BaseLib\BaseLib\obj\Debug\BaseLib.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\CSharp\BaseLib\BaseLib\obj\Debug\BaseLib.dll
+C:\Banu\Infinite\CSharp\BaseLib\BaseLib\obj\Debug\BaseLib.pdb

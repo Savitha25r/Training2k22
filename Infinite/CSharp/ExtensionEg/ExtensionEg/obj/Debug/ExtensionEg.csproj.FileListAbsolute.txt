@@ -1,0 +1,7 @@
+C:\Banu\Infinite\CSharp\ExtensionEg\ExtensionEg\bin\Debug\ExtensionEg.exe.config
+C:\Banu\Infinite\CSharp\ExtensionEg\ExtensionEg\bin\Debug\ExtensionEg.exe
+C:\Banu\Infinite\CSharp\ExtensionEg\ExtensionEg\bin\Debug\ExtensionEg.pdb
+C:\Banu\Infinite\CSharp\ExtensionEg\ExtensionEg\obj\Debug\ExtensionEg.csproj.AssemblyReference.cache
+C:\Banu\Infinite\CSharp\ExtensionEg\ExtensionEg\obj\Debug\ExtensionEg.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\CSharp\ExtensionEg\ExtensionEg\obj\Debug\ExtensionEg.exe
+C:\Banu\Infinite\CSharp\ExtensionEg\ExtensionEg\obj\Debug\ExtensionEg.pdb

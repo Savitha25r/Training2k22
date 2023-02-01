@@ -1,0 +1,18 @@
+Factory pattern :
+
+Abstract Factory pattern : 
+
+SingleTon Pattern :
+
+
+DI using unity ioc framework. 
+1. Install Microsoft.Practices.unity.ioc.framework from nuget package manager for solutions  (unity.ioc.framework)
+
+2.Include the Microsoft.Practices.Unity namespace in the file, where we have Main()
+3. Create a Unity Container Object 
+     UnityContainer uc= new UnityContainer();
+4. Register all types
+    uc.RegisterType<from .... to>();
+
+from : type that will be requested  (Iproducts,IOrders)
+to : type that is actually returned (DataLayer, OrdersClass) (implementing class)

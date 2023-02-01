@@ -1,0 +1,14 @@
+CodeBased Test 1 
+
+Solve the below 2 questions in VS 2019 and push it into your Github. 
+
+1. Write a program to find the Sum and the Average points scored by the teams in the IPL. Create a Class called Cricket that has a function called Pointscalculation(int no_of_matches) that takes no.of matches as input and accepts that many scores from the user. The function should then display the Average and Sum of the scores. 
+
+35 mts
+
+2. Write a class Box that has Length and breadth as its members. Write a function that adds 2 box objects and stores in the 3rd. Create a Test class to execute the above.
+
+25 mts.
+
+
+

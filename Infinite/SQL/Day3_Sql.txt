@@ -1,0 +1,227 @@
+The order of any select query execution is :
+
+from
+where
+group by
+having
+order by
+select
+
+
+select * from employee
+--sorting of data on a specific column/s
+--order by is the clause for sorting
+--only the output is sirted and not the physical data
+--multiple column sorting is possible
+--by default sorting is ascending(can make it desc)
+--sorting on alias column is possible
+--sorting on a column/s which are not a part of the select statement
+select * from employee order by Empname
+select Empid, empname 'EmployeeName', salary from  employee order by employeename
+select Empid, empname, deptid from employee order by salary desc
+select empname,salary from employee order by salary desc
+
+select empname, salary from employee order by empname,salary desc
+select empname,gender,salary from employee order by gender,salary desc
+select empname, deptid, salary from employee order by deptid desc,salary 
+
+--group by clause
+--have to group on all columns in the select clause excluding aggregates
+--can group on multiple columns
+--cannoty group on a column that is not a part of the select clause
+--cannot group by on an alias column
+
+--find the total salary per department
+select deptid,sum(salary) as TotalSalary,count(empname) from employee
+group by deptid,gender        --
+
+select deptid as Departmentid, gender, sum(salary) as TotalSalary from employee
+group by gender,DeptId
+
+--no of male and female employees working in the organization
+select gender,count(*) from employee group by gender
+select distinct(gender),count(gender) from employee group by gender
+
+-- no of male and female staff in each dept
+select gender,deptid as DeptId,count(gender) as 'Total Employees' from employee group by deptid,gender
+
+--display all the departments where total salary is greater than 25000
+select deptid as Departmentid, sum(salary) as TotalSalary  from employee
+group by DeptId
+having sum(salary)>25000
+
+--display dept wise max salary where max salary is > 12300
+select deptid,max(salary) as 'Max Salary' from employee group by deptid 
+having max(salary)>12300
+order by deptid desc
+
+--to filter few records before forming a group, use where clause
+select deptid,max(salary) as 'Max Salary' from employee 
+where deptid is not null
+group by deptid 
+having max(salary)between 12350 and 12500
+order by deptid desc
+
+
+--Joins
+--to retrieve multiple coumns from various tables
+/* types of joins
+   1. Equi Join /Natural Join /Inner Join
+   2. Cross Join (cartesan product)
+   3. Self Join (mirror of the same table gets created. So we will have to give an alias name for the same table)
+   4. Outer Join : matching records of 2 tables + the non matching records
+       Left Outer Join : matching records from 2 tables + the non matching data from the left hand side table
+	   Right Outer Join : matching records from 2 tables + the non matching data from the right hand side table
+	   Full Outer Join : matching records from 2 tables + the non matching data from the left as well as right hand side table
+    */  
+     --equi/natural/inner join
+     select * from department
+   select * from Employee
+ 
+   select Empid,Empname,Salary,Deptname from employee,department
+   where employee.DeptId=Department.DeptId
+   order by deptname
+   --or
+   select Empid,Empname,Salary,Deptname from employee inner join department
+   on employee.DeptId=Department.DeptId
+   order by deptname
+
+   --cross join
+
+   select * from employee,department
+   --or
+   select * from employee cross join department
+
+   --self join
+
+   select * from tbl_employee
+   select t2.empno as 'Subordinate Id',t2.ename as 'Subordinate Name',
+   t1.empno as 'Supervisor Id',t1.ename as 'Supervisor Name' from tbl_employee t1, tbl_employee t2
+   where t1.Empno=t2.manager_id
+
+   --left outer join
+   select * from employee e left join Department d on e.DeptId=d.DeptId
+
+   --right outer join
+   select * from employee e right join Department d on e.DeptId=d.DeptId
+
+
+ --indexes
+  /* 2 types
+  1. Clustered Index: 
+   -One per table. 
+   -The table gets physically sorted on every DML operations
+   -Gets created automatically on the Primary Key column
+   -If a table does not have a PK, then we can create a clustered unique index
+
+  2. Non Clustered Index : Many per table. 
+    - can be on as many columns as we want
+	- creates a seperate index table and sorts the data there,and does affect the physical original data in the table.
+	- Can have unique nonclustered index or just nonclusterd index
+   */
+  drop table sample
+create table sample(sampleid int,
+sname varchar(20),
+slocation varchar(20))
+--creating an index
+create index idxsampleid on sample(sampleid)
+--dropping an index
+drop index sample.idxsampleid
+drop index sample.idxsid
+--creating an clustered index
+create clustered index idxsid on sample(sampleid)
+select * from sample
+
+--creating an unique clustered index
+create unique clustered index idx_sid on sample(sampleid)
+
+insert into sample values(null,'sample1','location1'),(35,'sample2','location2'),
+(12,'sample3','location3')
+delete from sample where sname='sample2'
+
+sp_help sample
+
+--creating non clustered indexes
+--1. Unique Nonclustered (No duplicate data for the column
+create unique nonclustered index idxename on employee(empname)
+drop index employee.idxename
+
+create nonclustered index idxename on employee(empname)
+
+create table projects(eid int , pid int, prjname varchar(30),duration char(10)
+primary key(eid,pid))
+
+sp_help projects
+
+insert into projects values(1,100,'Salesmanagement','125hrs'),
+(2,100,'Salesmanagement','125hrs'),(1,200,'Studentsmanagement','200hrs')
+
+select * from projects
+
+--Transact Sql T-Sql
+/*begin
+ declare variables
+ assign values
+ use if/else , loops, calls 
+ print
+end*/
+--variables are of 2 type 1. Local (@) and 2. Global  (@@)
+--eg 1
+begin
+ declare @v1 int =0,@v2 int=0,@sum int
+ set @v1=5
+ set @v2=10
+ set @sum=@v1+@v2
+ print @sum
+ select @sum
+end
+
+--eg 2
+
+   declare @var1 int
+   declare @var2 int
+   select @var1=10
+   select @var2=40
+begin
+  if(@var1 >@var2)
+  print 'Var 1 is greater than Var2'
+  else
+  print 'Var2 is greater'
+end
+
+--eg3
+select empname,salary from employee where empid=2
+begin
+  declare @sal float
+  declare @name varchar(20)
+  select @name=empname,@sal=salary from employee where empid=2
+  print @sal
+  print @name
+  print 'Employee Name is :' + @name
+  print 'Employee Salary is :' + cast(@sal as varchar(20))
+  if(@sal<=12000)
+   begin
+	set @sal=@sal+3000
+	print 'Employee Revised Salary is : ' + cast(@sal as varchar(20))
+   end
+  else
+   begin
+     set @sal=@sal+1000
+	 print 'Salary is OK now ' + cast(@sal as varchar(20))
+   end
+end
+
+--eg 4
+
+declare @ctr int =0
+
+while @ctr <=10
+ begin
+  set @ctr=@ctr+1
+     
+   if @ctr=5 continue
+    print @ctr
+    
+  if @ctr=8 break
+ end
+ 

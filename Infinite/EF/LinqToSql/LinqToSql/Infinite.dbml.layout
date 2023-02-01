@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Infinite">
+  <DataContextMoniker Name="/InfiniteDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0f0777a0-cf00-427f-b465-94f192b11cc0" absoluteBounds="1.875, 2.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/InfiniteDataContext/Employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e6b3f62-1a54-4d29-86b0-d1caaa93d09a" absoluteBounds="1.8900000000000001, 2.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4659cb52-b617-4ede-b855-9af44e40740d" absoluteBounds="2.875, 1.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/InfiniteDataContext/Department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75c3bb33-f39a-467f-a89f-9b260edae19f" absoluteBounds="2.89, 1.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 2.16429768880208); (1.625 : 2.16429768880208); (1.625 : 3.48159912109375); (1.875 : 3.48159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/InfiniteDataContext/Department/Department_Employee" />
+      <nodes>
+        <classShapeMoniker Id="4659cb52-b617-4ede-b855-9af44e40740d" />
+        <classShapeMoniker Id="0f0777a0-cf00-427f-b465-94f192b11cc0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="93da43cc-fd37-4553-9b0e-2b34a750071e" absoluteBounds="2.125, 1, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/InfiniteDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f28709b-31db-4874-b32d-8a5c7a3d5300" absoluteBounds="2.14, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3daa9647-fda2-4d32-afe8-52c2f51eb352" absoluteBounds="0.75, 1.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/InfiniteDataContext/tbl_Department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62f5e1de-a52b-49c5-9168-ce9296c33d9e" absoluteBounds="0.765, 2.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="43106bd9-4f7c-4572-aca3-dac5f398c160" absoluteBounds="1, 3.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/InfiniteDataContext/tbl_Employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6500d2ca-4ccd-4b32-8c03-e3a37090a556" absoluteBounds="1.0150000000000001, 4.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.25 : 3.0112939453125); (1.25 : 3.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/InfiniteDataContext/tbl_Department/tbl_Department_tbl_Employee" />
+      <nodes>
+        <classShapeMoniker Id="3daa9647-fda2-4d32-afe8-52c2f51eb352" />
+        <classShapeMoniker Id="43106bd9-4f7c-4572-aca3-dac5f398c160" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

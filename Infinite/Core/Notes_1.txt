@@ -1,0 +1,35 @@
+.Net Core :
+
+- New Version of the .Net Framework.
+- Free and Opensource
+- Cross Platform framework(Windows,Linux,mac os)
+- Different types of applications possible(desktop, console, web,mobile,cloud, Iot,ML,Microservices,Games)
+- Supports Multiple lang.
+- CLI Tools - Comand Line Interface
+
+- Is a rewritten fremework from scratch, which is modular, fast, cross platform, light weight
+
+
+It is both an exe and a Dll based application
+ 
+Services: Is a component that is intended for common consumption in an application, which can injected into the constructor/method/property
+
+Middlewares: Components of applications that perform asynchronous login on HttpContext. They can invoke the next middleware in the pipeline or terminate the request.
+Asp.net Core comes with rich set of middlewares
+
+Hosting Model: We have In-Process and Out-Of-Process
+
+InProcess is default hosting
+
+Kestrel: Cross platform web server. It is included as a default internal server
+
+Execution Types
+---------------
+
+Command Name Profile : Hosting Model is Ignored, Only Internal Kestrel web server is used
+
+IIs Profile : In-Process - Only IIS Built-in Server is used
+
+IIs Profile : Out-of-Process - Ketsrel server will be used
+
+

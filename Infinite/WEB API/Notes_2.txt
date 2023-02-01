@@ -1,0 +1,7 @@
+Securing an Application is crucial
+
+We can achieve this through 
+
+Authentication : Is a process of identifying the user.
+
+Authorization: Is the process of deciding whether the authenticated user can perform certain actions on a specific resource

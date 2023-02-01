@@ -1,0 +1,45 @@
+Software Development Life Cycle
+
+1. Waterfall Model :
+
+2  Incremental model:
+
+3. V Shaped Model
+
+4. Iterator Model
+
+5. Spiral Model :
+
+
+Agile Methodology : The methods are considered light weight. People based rather than plan based. No single method, Several agile methods. No single definition
+
+Agile manifesto (set of principles). Is developed Agile Alliance
+
+  Test Driven Development - TDD
+
+Testing: Is a process of executing a program/application with the intent of finding the sw bugs.
+- Process of verification and validation
+
+Unit Testing : Testing a small piece of an IPO Cycle ( input - process - output)
+
+Framework support for testing
+NUnit : used for all .Net applications. Is an open source sw
+
+MsTest: Integrated with Visual Studio
+
+MbUnit: 
+
+testing involves writing test cases: It works with a concept called as 3A's
+
+1. Arrange (object creation etc)
+2. Ask - (Method calling/invoking)
+3. Assert (checking the code correctness)
+
+Test cases are always public (no other modifier is allowed).
+Test cases do not have any return type
+The names of the testcases should be meaningful even it is is big and lengthy
+
+
+
+
+

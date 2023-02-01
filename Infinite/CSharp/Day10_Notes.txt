@@ -1,0 +1,46 @@
+Generics with objects
+
+Generic Constraints : are restrictions for the Generic Object
+
+Hands On:
+Create a class <anyname>. Inside the class have a public method called Display as below
+
+public void Display<T>(string msg, T Val)
+{
+cw("{0} :{1}", msg, Val);
+}
+
+now instantiate the class and call the Display method with different data types
+
+
+Delegates : - A Reference Type that holds the reference to a Method/Function
+- They are like Pointers to Functions/Methods
+- Their reference can be changed dynamically
+- We should declare delegates with signature
+- The delegate object can refer to methods whose signature matches with the delegate
+
+Delegates are essentially used to implements events and in callbacks
+
+
+Multicast Delegates : A concept where a single object of the delegate can be pointing to multiple functions (same signature ). The same object will refer to all the multiple functions one at a time in the order of functions added.
+
+Multicasting is not recommended when the functions return values and we need the return values for further processing, since the retun values or over written 
+
+Events: Publisher - Subscriber Model
+
+Publisher - the class that raises the event
+Subscriber - the class that handles the event
+
+One event can have multiple subscribers
+one subscriber can handle events from multiple publishers
+
+-The events are declared and raised in a class and associated with evenet handlers using delegates within the same class or some other class. The class containing the event is used to publish the event
+
+- Another class that accepts the event is called as subscriber. This object provides event handlers
+
+- A publisher is an object that contains the definition of the event and the delegate. The event-delegate association is also defined in this object. A publisher class object invokes the Event and it notifies to other objects(subscribers)
+
+series of activities : user-->events-->delegates-->functions
+
+
+

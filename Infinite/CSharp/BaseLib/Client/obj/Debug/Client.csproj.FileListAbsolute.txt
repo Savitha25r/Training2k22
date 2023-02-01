@@ -1,0 +1,10 @@
+C:\Banu\Infinite\CSharp\BaseLib\Client\bin\Debug\Client.exe.config
+C:\Banu\Infinite\CSharp\BaseLib\Client\bin\Debug\Client.exe
+C:\Banu\Infinite\CSharp\BaseLib\Client\bin\Debug\Client.pdb
+C:\Banu\Infinite\CSharp\BaseLib\Client\bin\Debug\BaseLib.dll
+C:\Banu\Infinite\CSharp\BaseLib\Client\bin\Debug\BaseLib.pdb
+C:\Banu\Infinite\CSharp\BaseLib\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Banu\Infinite\CSharp\BaseLib\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\CSharp\BaseLib\Client\obj\Debug\Client.csproj.CopyComplete
+C:\Banu\Infinite\CSharp\BaseLib\Client\obj\Debug\Client.exe
+C:\Banu\Infinite\CSharp\BaseLib\Client\obj\Debug\Client.pdb

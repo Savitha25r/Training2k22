@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="InfiniteDB" Class="InfiniteDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-TJJ7D977;Initial Catalog=InfiniteDB;Integrated Security=True" SettingsObjectName="LinqToSql.Properties.Settings" SettingsPropertyName="InfiniteDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Employee" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="Empid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Empname" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Salary" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="DeptId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="Department_Employee" Member="Department" ThisKey="DeptId" OtherKey="DeptId" Type="Department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Department" Member="Departments">
+    <Type Name="Department">
+      <Column Name="DeptId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DeptName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Budget" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Association Name="Department_Employee" Member="Employees" ThisKey="DeptId" OtherKey="DeptId" Type="Employee" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Products" Member="Products">
+    <Type Name="Product">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProdName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QtyAvailable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Department" Member="tbl_Departments">
+    <Type Name="tbl_Department">
+      <Column Name="DeptNo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DName" Type="System.String" DbType="VarChar(33) NOT NULL" CanBeNull="false" />
+      <Column Name="Loc" Type="System.String" DbType="VarChar(22) NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Department_tbl_Employee" Member="tbl_Employees" ThisKey="DeptNo" OtherKey="DeptNo" Type="tbl_Employee" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Employee" Member="tbl_Employees">
+    <Type Name="tbl_Employee">
+      <Column Name="EmpNo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EName" Type="System.String" DbType="VarChar(24) NOT NULL" CanBeNull="false" />
+      <Column Name="job" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="manager_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HireDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="salary" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="commision" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DeptNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_Department_tbl_Employee" Member="tbl_Department" ThisKey="DeptNo" OtherKey="DeptNo" Type="tbl_Department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.FewEmployee" Method="FewEmployee">
+    <ElementType Name="FewEmployeeResult">
+      <Column Name="Empid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Empname" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Salary" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="DeptId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

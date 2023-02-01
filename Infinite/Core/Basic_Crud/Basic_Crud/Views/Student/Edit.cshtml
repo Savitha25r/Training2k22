@@ -1,0 +1,33 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Change";
+}
+
+<h1>Change</h1>
+
+<form method="post">
+    <p>
+        <label asp-for="StdId">Id :</label>
+        <input asp-for="StdId" />
+    </p>
+    <p>
+        <label asp-for="StdName">Your Name :</label>
+        <input asp-for="StdName" />
+    </p>
+    <p>
+        <label asp-for="Gender">Your Gender :</label>
+        <input type="radio" asp-for="Gender" value="M" />Male
+        <input type="radio" asp-for="Gender" value="F" />Female
+    </p>
+    <p>
+        <label asp-for="Branch">Your Branch :</label>
+        <select asp-for="Branch">
+            <option value="CSC">Computer Science</option>
+            <option value="IT">IT</option>
+            <option value="ECE">ELectronics n Comm.</option>
+        </select>
+    </p>
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+</form>

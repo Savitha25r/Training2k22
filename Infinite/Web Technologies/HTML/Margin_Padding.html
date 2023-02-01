@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        div{
+            border: 5px solid blue;
+            width: 400px;
+            background-color: aqua;
+            margin:auto;           
+        }
+        body{
+            background-color: azure;
+        }
+        .padding{
+            padding: 10px 10px ;
+            width: 200px;
+           /* background-color: rgb(23, 175, 46);*/
+            box-sizing: content-box;
+        }
+        img{
+            opacity: 2.5;
+            filter: alpha(opacity=50); /*IE 8 and below*/
+        }
+        img:hover{
+            opacity: 0.0;
+            filter: alpha(opacity=0);
+        }
+        #tran{
+            color:red;
+            opacity: 1.7;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Margin Property</h1>
+    <div class="padding">Hello and welcome to Padding Property</div>
+    <hr/>
+    <h1>Image Transperency</h1>
+    <img src="Images/Doll.jpg" alt="Doll" height="100" width="150">
+    <br/>
+    <p id="tran">I am a Transparent Para</p>
+
+</body>

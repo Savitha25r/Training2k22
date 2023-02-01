@@ -1,0 +1,8 @@
+        Introduction to ASP.NET Core
+        ASP.NET Core First Application
+        Controllers & Action Methods
+        Views
+        Model Binding
+        Validations & Data Annotations
+        MVC and Entity Framework Core
+        Routing

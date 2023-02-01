@@ -1,0 +1,24 @@
+create or alter procedure spGetProducts
+as
+begin
+--waitfor delay '00:00:05'
+select ProductId, prodName,Price,QtyAvailable from Products
+end
+
+exec spGetProducts
+
+create or alter procedure spGetProductsByName(@prodname nvarchar(40))
+as
+begin
+	if(@prodname='All')
+	begin
+		select ProductId, prodName,Price,QtyAvailable from Products
+	end
+	else
+	 begin
+		select ProductId, prodName,Price,QtyAvailable from Products where prodName=@prodname
+	end
+end
+
+sp_help products
+exec spGetProductsByName 'all'

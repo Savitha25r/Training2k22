@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--Eg.3
+<body>
+    <div id="changeme"></div>
+    <script>
+        document.getElementById("changeme").innerHTML='<p><font color=blue>Hello World..</font></p>';
+    </script>
+</body>-->
+
+<!--Eg. 4
+<body>
+    <script>
+        function change(){
+            var paragraphs=document.getElementsByTagName('p');
+            document.getElementById('output').innerHTML=paragraphs[1].innerHTML;
+           // alert('Changed Data');
+        }
+    </script>
+    <p id="output">This is Javascrit using getElementsByTagName</p>
+    <p>Para 2</p>
+    <p>Para 3</p>
+    <p>Para 4</p>
+    <h2>Heading 2</h2>
+    <input type="button" onclick="change()" value="Click here to change Paragraph">
+</body>-->
+
+<!--Eg. 5
+<body>
+    <h1>Date Functions</h1>
+    <p id="demo">getDate()</p>
+    <script>
+        var currentdt= new Date();
+        currentdt.setDate(currentdt.getDate()+20);        
+    </script>
+    <button type="button" onclick="document.getElementById('demo').innerText=currentdt"> Get the new Date</button>
+</body>-->
+
+<!--Eg. 6
+<head>
+    <script type="text/javascript">
+        function wishes(name,age){
+            console.log(name);
+            console.log(age);
+            document.write(name + " "+ "is" + age + " "+"years old");
+        }
+    </script>
+</head>
+<body>
+    Name :<input type="text" id="nameid" size="20"><br/>
+    
+    Age :<input type="number" id='ageid' min="21" max="60" ><br/>
+    <input type="button" onclick="wishes(nameid.value,ageid.value)" value="Say hello">
+</body>-->
+
+<!--Eg. 7 function with return type-->
+<head>
+    <script>
+        function concat(first,last){
+            var full;
+            full=first + last;
+            return full;
+        }
+
+        function caller(){
+            var result;
+            result=concat('Amitabh','Bacchan');
+            document.getElementById('showresult').innerText=result;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="caller()" value="Get Full name">
+    <h2 id="showresult">Heading 2</h2>
+</body>
+

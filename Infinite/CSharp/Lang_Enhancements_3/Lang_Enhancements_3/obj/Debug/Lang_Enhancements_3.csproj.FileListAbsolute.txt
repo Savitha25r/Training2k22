@@ -1,0 +1,6 @@
+C:\Banu\Infinite\CSharp\Lang_Enhancements_3\Lang_Enhancements_3\bin\Debug\Lang_Enhancements_3.exe.config
+C:\Banu\Infinite\CSharp\Lang_Enhancements_3\Lang_Enhancements_3\bin\Debug\Lang_Enhancements_3.exe
+C:\Banu\Infinite\CSharp\Lang_Enhancements_3\Lang_Enhancements_3\bin\Debug\Lang_Enhancements_3.pdb
+C:\Banu\Infinite\CSharp\Lang_Enhancements_3\Lang_Enhancements_3\obj\Debug\Lang_Enhancements_3.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\CSharp\Lang_Enhancements_3\Lang_Enhancements_3\obj\Debug\Lang_Enhancements_3.exe
+C:\Banu\Infinite\CSharp\Lang_Enhancements_3\Lang_Enhancements_3\obj\Debug\Lang_Enhancements_3.pdb

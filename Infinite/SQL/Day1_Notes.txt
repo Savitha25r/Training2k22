@@ -1,0 +1,90 @@
+Database  : Storage of inter related data that has been organised in such a fashion that the process of retrieving data is effective and effcient
+
+Database Management System :A set of programs that helps to collect inter related data, store and access in an environment that is both convenient and efficient
+
+Purpose of Database Systems:  Data Redundancy and Inconsistancy. Data Isolation, Data Security, Data access etc.. were all posing problems when stored in a flat file system. Hence there was a need to have something better than file system
+
+Data Models : A collection of tools for describing
+  - data
+  - data relationships
+  - data semantics
+  - data Constraints
+
+Types of Model :
+Hierarchial Database MS
+Network Database MS
+Relational Database MS
+Object Relational Database MS : Multimedia and Hyper Text supported Data
+
+RDBMS works on the concept of Relational Algebra (set theory)
+
+Data is stored in the form of Tables also known as Relations
+
+A table /Relation is a matrix with rows and columns
+
+E/R diagram - Entity Relationship diagram
+
+Entity : is anything that exists and is distinguishable. Is like an object which has describing features called as attributes
+
+Attributes : are descriptive features that form the columns of the table
+
+Tuples : are the rows of the table ( where the actual data is available)
+
+Degree : number of attributes
+
+Cardinality : no. of tuples
+
+Primary Key : a Unique identifier for the table
+
+Types of Relationships
+one to one
+one to many
+many to many courses
+
+Various Keys in RDBMS
+
+1. Candidate Key
+2. Alternate Key
+3. Primary Key - cannot have duplicate values and null values
+4. Composite Key/Compound - more than one column becoming a primary key for a table
+5. Unique Key - is like pK, but can take up one null
+6. Foreign key - can be duplicates and can have nulls, but the values in FK always have to have a match in PK (in another table)
+
+Employee id, EmployeeName, EmployeePhone  dept
+100201         Savitha       12345        Health
+105321         Divya          345          null
+100221         Ramakrishna    87908       Health
+100455         Divya         23456789     IT
+
+
+Integrity Constraints in DBMS
+1. Entity Integrity : Primary Key and Unique Key
+2. Domain Integrity : check, default, null, not null
+3. Referential Integrity :Foreign Key
+
+Structured Query Lang. SQL ( a set of commands to work with the database)
+
+Consists of 5 Components
+1. DDL : Data Definition Lang.(Create, Alter,Drop,Truncate)
+2. DML : Data Manipulation Lang (Insert, Update, Delete)
+3. DQL : Data Query Lang (Select)
+4. TCL : Transaction Control Lang (Commit, Rollback)
+5. DCL : Data Control Lang (Grant, Revoke)
+
+Data Types : 
+char(n)
+varchar(n), nvarchar(n/max)
+numeric  
+float
+date
+real
+double
+
+
+isql>
+
+Create table <tablename>
+( col1 <datatype><size>  <constraints,
+
+coln <datatype><size>  constraints)
+

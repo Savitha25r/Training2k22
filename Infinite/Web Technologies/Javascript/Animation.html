@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+   <!-- <head>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <style>
+            img{
+                position: relative;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $('button').click(function(){
+                    $('img').animate({width:"75",top:300}).animate({opacity:"0.25",left:200}).
+                       // top:300,
+                       // left:300
+                  animate({width:"200px",right:100})  
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button>Start Animation</button>
+        <p>
+            <img src="C:\Banu\Infinite\Web Technologies\Images\Doll.jpg">
+        </p>
+    </body>-->
+    <head>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <style>
+            p{
+                width:200px;
+                padding: 40px 0px;
+                font:bold 24px sans-serif;
+                text-align: center;
+                background-color: aquamarine;
+                border: 1px solid goldenrod;
+                box-sizing: content-box;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $(" .start").click(function(){
+                    $('p').animate({width:"100%"}).animate({fontSize:"48px"}).animate({
+                        borderWidth:"30px"
+                    });
+                });
+                $(" .reset").click(function(){
+                    $('p').removeAttr("style")
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p>Hello Animation..</p>
+        <button class="start">Start Animation</button>
+        <button class="reset">Reset </button>
+    </body>
+</html>

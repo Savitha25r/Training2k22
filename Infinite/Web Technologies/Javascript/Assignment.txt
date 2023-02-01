@@ -1,0 +1,5 @@
+1. Write a Javascript program to compute the sum of the given 2 integers. If the 2 values are same, then return triple their sum
+
+2. Write a Javascript program to check whether given 2 integer values are in the range of 50-90(inclusive). Return true if both of them are in the said range elese false.
+
+3. Write a javascript to get the extension of a filename given by the user (hint: use split and pop()) 

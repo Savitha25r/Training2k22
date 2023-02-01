@@ -1,0 +1,271 @@
+--stored procedure with exception handling and transaction management
+
+create table Products
+(ProductId int primary key,
+ProdName varchar(50),
+Price int,
+QtyAvailable int)
+
+--populate some records
+insert into Products values(100,'Laptops',54000,100),
+(101,'Desktops',32000,50),
+(102,'Tablet',21000,75),
+(103,'Mobile',25000,50)
+
+create table ProductSales(ProductSalesId int primary key,
+ProductId int references Products(ProductId),
+QtySold int)
+
+create or alter procedure spSellProduct 
+@productid int, @QtyToSell int
+as 
+begin
+ --first we need to check the stock availability for the product that we want to sell
+ declare @stockavailable int
+ select @stockavailable=QtyAvailable from Products where productid = @productid
+  --we need to throw an error when the stock is less than the qty to sell
+  --RaiseError is a system function that takes 3 parameters as below
+  --Raiserror('Error Message', ErrorSeverity, Errorstate)
+   if(@stockavailable < @QtyToSell)
+   begin
+    Raiserror('Not Enough Stock',16,21)
+   end
+   --if stock is more then 
+  else
+   begin
+    --we need to start a transaction
+	begin transaction
+	  -- first update the qtyavailable in products table
+	  update Products set QtyAvailable=(QtyAvailable-@QtyToSell)
+	  where ProductId=@productid
+	  --next we need to insert one record of the sale made in Productsales table
+	  --in order to insert productsalesid automatically we can use a logic as below
+	  declare @maxid int
+	  select @maxid=case
+	   when max(productsalesid) is null then 0
+	   else max(productsalesid)
+	   end
+	   from ProductSales
+	   --increment @maxid by 1, so that we dont get a primary key violation
+	   set @maxid=@maxid+1
+	   --now we can insert a record into productsales table
+	   insert into ProductSales values(@maxid,@productid,@QtyToSell)
+	   --the @@Error returns a non-zero value if there is an error, otherwise 0
+	   if(@@ERROR <> 0)
+	   begin
+	    Rollback transaction
+		print 'Rolling back the transaction..'
+	   end
+	   else
+	    begin
+	     Commit Transaction
+	     print ' Comitted the transaction'
+		end
+ end
+end
+
+-- execute the above proc
+select * from products
+select * from ProductSales
+exec spSellProduct 101,20
+
+select max(productsalesid) from ProductSales
+
+--eg 2 error handling in a procedure
+create or alter procedure Errhandler1
+as
+begin
+  begin try
+    select Empname + Salary from employee where empid=5
+  end try
+  begin catch
+    print 'cannot concatenate varchar with float'
+  end catch
+end
+
+create or alter procedure Errhandler1
+as
+begin
+  begin try
+    select Empname + Salary from employee where empid=5
+  end try
+  begin catch
+    --print 'cannot concatenate varchar with float'
+	--Raiserror(15600,11,1,'invalid Operation in procedure')
+	raiserror(15600,11,2)
+	--throw 51000,'Problem',15
+  end catch
+end
+--can execute a procedure without the exec/execute command as below
+errhandler1
+
+--To add a user defined message 
+
+exec sp_addmessage 51000,12,'MyErrorMessage'
+
+--to view all the errors
+
+select * from sys.messages where message_id=15600
+
+---cursors
+declare @empname varchar(max),
+@sal float
+--declaring a cursor
+declare mycur1 cursor
+for select empname,salary from employee
+--open the created cursor
+open mycur1
+--fetch the first record
+fetch next  from mycur1 into @empname,@sal
+ --iterate and fetch data till the end of the cursor
+ while @@FETCH_STATUS=0
+  begin
+   if(@sal>12300)
+     begin
+	   print @empname + ' earns : '+ cast(@sal as varchar(max))
+	  
+	 end
+    else
+	 begin
+	  print @empname + ' earns less than 12300'
+	   --update employee set salary =salary +200 where empname=@empname
+	   print 'Salary Updated in table'
+	 end
+  fetch next from mycur1 into @empname,@sal
+ end
+ close mycur1
+ deallocate mycur1
+
+ insert into employee values(200,'Banurekha',12350,'Female',4,000008)
+
+ select * from employee
+
+ --static cursors
+ declare @ename varchar(max),
+@esal float
+--declaring a cursor
+declare mycur2 cursor static
+for select empname,salary from employee
+--open the created cursor
+open mycur2
+--fetch the first record
+fetch relative 5 from mycur2 into @ename,@esal
+ --iterate and fetch data till the end of the cursor
+ while @@FETCH_STATUS=0
+  begin
+   if(@esal>12300)
+     begin
+	   print @ename + ' earns : '+ cast(@esal as varchar(max))
+	  
+	 end
+    else
+	 begin
+	  print @ename + ' earns less than 12300'
+	   --update employee set salary =salary +200 where empname=@empname
+	  -- print 'Salary Updated in table'
+	 end
+  fetch  relative 2 from mycur2 into @ename,@esal
+  --fetch prior from mycur2 into @ename,@esal
+ end
+ close mycur2
+ deallocate mycur2
+
+ --triggers
+ --eg 1
+ create or alter trigger trg_ins_Emp
+ on Employee   
+ for Insert
+ as
+ begin 
+  select * from inserted  -- to show the contents of the inserted table
+  select * from employee
+ end
+
+
+ --the above trigger does not fire on update or delete events on employee
+ select * from employee
+ delete from employee where empname='Banurekha'
+
+ --now when we insert records into employee table the above trigger will fire
+ 
+ insert into employee values(200,'Banurekha',15000,'Female',null,5555555)
+
+ --eg .2  update trigger
+ create trigger trg_upd_Emp
+ on Employee
+ for update
+ as
+ begin
+  select * from deleted
+  select * from inserted
+ end
+
+ update employee set phone='666666666', deptid=5 where empid=200
+
+--eg 3
+ 
+--when a record is inserted into employee table, a trigger should fire and insert a record into Audit (log file)
+create table AuditTable
+(Msg varchar(1000))
+
+select * from tbl_Employee  --empno =7777, mgrid=7839
+
+create trigger trgAudit
+on tbl_employee
+for insert
+as
+begin
+  declare @id int
+  select * from inserted
+  select @id=Empno from inserted
+  insert into AuditTable 
+  values('New Employee with Empno '+ cast(@id as nvarchar(5)) + ' is added at ' +
+   cast(getdate() as nvarchar(max)))
+end
+
+insert into tbl_Employee values(7777,'Abracadabra','Jobless',7839,'2022/10/27',11000,500,40)
+
+select * from tbl_employee
+select * from AuditTable
+
+--eg 3 delete trigger
+
+create trigger trgAudit_del
+on tbl_employee
+for delete
+as
+begin
+  declare @id int
+  select * from deleted
+  select @id=Empno from deleted
+  insert into AuditTable 
+  values('Existing Employee with Empno '+ cast(@id as nvarchar(5)) + ' is deleted at ' +
+   cast(getdate() as nvarchar(max)))
+end
+
+delete from tbl_employee where empno=7777
+
+--eg 4 --update trigger
+create or alter trigger trgAudit_Upd
+on tbl_employee
+for update
+as
+begin
+declare @id int, @oldname varchar(max),@newname varchar(max)
+declare @oldsalary money, @newsalary money
+declare @auditmsg varchar(1000)
+select * from deleted
+select * from inserted
+select @id=empno from inserted
+select @oldname =Ename from deleted
+select @oldsalary=Salary from deleted
+set @auditmsg=Concat(@oldname,@oldsalary)
+
+insert into Audittable values(@auditmsg)
+end
+
+update tbl_employee set Ename='SMITHA RANI',salary=1800 where empno=7369
+select * from tbl_employee
+select * from Audittable
+
+ 

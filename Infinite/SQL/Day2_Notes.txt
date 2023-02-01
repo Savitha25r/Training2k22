@@ -1,0 +1,15 @@
+Selection/Restriction   - where predicate 
+
+Projection - use column list to display only few columns
+
+
+
+
+
+
+Delete                  				  vs       	  Truncate
+- Is a DML command									Is a DDL command
+- Can restrict no.of records being deleted				Cannot restrict some records from being deleted. (will delete all records)
+- Can Rollback deletion								No Rollback Possible 
+- Is slower                                               Is Faster
+- Retains the Structure of the object					Retains the structure of the object

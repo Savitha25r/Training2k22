@@ -1,0 +1,17 @@
+Tuples : Is a data structure that contains a sequence of elements of dufferent data types
+When we need more values from a method, we can use tuples.
+
+The different ways to return more than one value from a method :
+1. Using Out Variables : But this is not allowed in async methods (parallel Execution)
+2. Using Custom Datatype : But tedious and may be too much for the requirement
+3. Using Dynamic Datatype : But has performance issues
+
+LINQ : Lang. Integrated Query. It is a uniform syntax to retrieve data from different sources and formats. Provides a single interface for querying
+
+Query Expressions or query Syntax 
+
+Method Syntax or fluent syntax - uses extension methods and includes Lambda Expressions : 
+
+There are 2 types of Execution of a query
+  1. Immediate 
+  2. Defferred

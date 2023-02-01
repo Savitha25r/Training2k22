@@ -1,0 +1,38 @@
+WEB API : ASP.Net Web API is an extensible framework for building REST ful services that can be accessed from any client such as browsers, mobile devices,IOTs
+
+REST stands for Representational State Transfer
+It is an architectural pattern used for data exchange over a distributed environment.
+It works solely on HTTP based services.
+
+Get
+Post -FromBody or FromURL
+Put- update all columns/data
+Patch - update few data/columns
+Delete 1. soft delete, where we need to update a column like status/remarks etc
+       2. hard delete, where the entire record is removed from the persistent storage
+
+From To
+Date of onward
+date of return 
+
+Sent -> REST -> XML/JSON
+
+The REST Pattern specifies a set of constraints
+1. Client-Server Constraint: No dependency on each other. Seperation of concern that makes it easy for development and maintenence. A client should only know the URI's
+
+2. Stateless Constraint: Communication between client and server should be stateless, meaning server should not store any details of client. This helps to treat every request independently
+
+3. Cachable Constraint : When the servers master data that does not undergo changes frequently, then it can be chached at the client for as long as the client wishes to have it.
+
+4. Uniform Interface Constraint : All resources that miove between client and server are only using HTTP verbs
+
+
+5. Content Negotiation : Client ha sthe ability to dcide in which format it wants the response (XML/JSON)
+
+6. Layered System: Having the UI, Businees Logic, Data Access logic all seperated either as different folders/applications
+
+
+Attribute Routing : is a customized way to access action methods inside a controller
+
+The entry in the routing table will be made with the route name rather the http verb name
+

@@ -1,0 +1,88 @@
+GIT -Open Source version control system 
+
+TFS - Team Foundation System -
+
+GitBash :Install it for windows
+
+Create a Directory/Folder for the training and move to that folder
+Eg : c:\Banu\Infinite
+
+Local Repository : 
+1. git init
+2. create some files
+3. git add .
+4. git commit -m <"message">
+5. create a remote repo and copy the link
+6. git remote add <remote repo alias name> <link of the remote repo>
+7. git push <remote repo alias name> master
+8. for getting any changes done at the remote repo
+    type  git pull <remote repo alias name> master
+
+-- Git status 
+-- git remote -v ( to see which is the remote repo in sync with our local repo)
+
+Global/Remote Repository
+
+
+Dot Net Framework : Is a software component that runs predominantly on windows os.
+ It provides tools and libraries that enable the developers to build software faster and easier (RAD- Rapid Application Development)
+
+Dot Net is Microsofts web services strategy to connect information,people,systems and devices through software
+
+Types of Application:
+1. Console /Desktop
+2. Web Application  - restful apis  (.net framework and .net core)
+3. Mobile Application - Xamarin
+
+Namespace : is a logical organization of other namespaces,classes,interfaces,structures,delegates,events etc..
+--is also used to avoid name clashes
+
+On Compilation of  dot net sourcecode - assemblies are created
+
+Assemblies : Are a fundamental unit of deployement,
+ version control,
+reuse
+ and security for a .net application
+- It contains - PE(portable executable) header, CLR Header, Manifest and IL
+- Manifest file contains metadata (data aboutthe data)
+
+Assemblies can be either of type .exe or .dll
+
+Assemblies can be either shared or private
+Shared Assemblies are placed in GAC (Global Assembly Cache)
+
+Assembler Tools :
+1. ILDASM - IL Disassembler
+2. ILASM - IL Assembler
+
+CSharp : as a Language 
+
+Is a modern, general purpose object oriented programming language developed by Microsoft (Anders Hejls-berg) 
+
+Obeject Oriented programming (OOPS)
+ WYSIWYG
+
+Class : A blue print of a complete unit of Data (state) and Behaviours. It a data type (user defined)
+
+app a=new app();
+a.display();
+Objects : An instance of a class
+
+
+Data Types : it ia type of data variable will store such like int,float
+it specfies size and type of variable value
+
+2 types
+1. Value Types 
+user defined -structured,enumerations
+predefined- All Integral data types(system/primitive/fundamental)
+  Boolean, Integer,Float,Decimal,Character  etc.
+
+2. Reference Types 
+predefined- string ,object
+user defined: All class,arrays,interface,delegates,events etc 
+
+
+
+
+

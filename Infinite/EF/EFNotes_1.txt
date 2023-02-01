@@ -1,0 +1,25 @@
+Entity Framework : EF Object Relational mapper (ORM)that enables the dot net developers to work with relational data using domain specific objects. It is an open source ORM framework for ADO.net
+
+DbContext : Is an instance that represents a combination of Unit Of Work and Repository Patterns such that it can be used to query from a database  and group together any changes that has to be written back to the store as a unit
+
+Types of Entity :
+
+1. POCO Entities (Plain Old CLR Object) A POCO entity is a class that does not depend on any framework specific base class. It is like a normal .Net CLR class
+
+2. Dynamic Proxy Entities(POCO Proxy)Dynamic proxy is a runtime proxy class which wraps the POCO entity. 
+
+Eager and Lazy Loading 
+
+Eager Loading: is the process where a query for one type of entity also loads related entities as a part of the query. Eager loading is achieved by using Include()
+
+Lazy Loading : It is opposite of Eager Loading. The process of loading the related type is delayed until we specifically request for it.
+
+3 Approched to work with EF
+
+1. Database First (Existing Database) relations are simply mapped to classes as models
+2. Code First (New Database)-Write class and map it to relations using migrations
+3. Model First - create models in design mode, and classes are auto generated
+
+CRUD - Create, Read, Update, Delete
+
+

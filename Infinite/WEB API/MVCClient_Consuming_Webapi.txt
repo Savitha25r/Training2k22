@@ -1,0 +1,17 @@
+MVC Client to consume Web API Services
+
+1. Create a WebAPI project
+2. Install Entity Framework 6.0 through nuget
+3. Include ADO Entity Data Model and ensure all tables are mapped into the Model Edmx
+4. Create Action Methods in the relevant api controllers
+5. Test Them using Postman
+
+1. Create a MVC template application
+2. Add required Models that represent the actual model data
+3. Add an empty controller
+4. Add required Action Methods
+5. Include Newtonsoft.Json package
+6. Include HttpClinet using System.Net.Http;
+7. Include Newtonsoft.Json;
+8. Add Microsoft.Aspnet.WebApi.client through nuget
+9. Next start working on action methods logics

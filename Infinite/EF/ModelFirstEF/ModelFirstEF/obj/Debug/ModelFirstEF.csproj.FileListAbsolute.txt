@@ -1,0 +1,12 @@
+C:\Banu\Infinite\EF\ModelFirstEF\ModelFirstEF\bin\Debug\ModelFirstEF.exe.config
+C:\Banu\Infinite\EF\ModelFirstEF\ModelFirstEF\bin\Debug\ModelFirstEF.exe
+C:\Banu\Infinite\EF\ModelFirstEF\ModelFirstEF\bin\Debug\ModelFirstEF.pdb
+C:\Banu\Infinite\EF\ModelFirstEF\ModelFirstEF\bin\Debug\EntityFramework.dll
+C:\Banu\Infinite\EF\ModelFirstEF\ModelFirstEF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Banu\Infinite\EF\ModelFirstEF\ModelFirstEF\bin\Debug\EntityFramework.xml
+C:\Banu\Infinite\EF\ModelFirstEF\ModelFirstEF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Banu\Infinite\EF\ModelFirstEF\ModelFirstEF\obj\Debug\ModelFirstEF.csproj.AssemblyReference.cache
+C:\Banu\Infinite\EF\ModelFirstEF\ModelFirstEF\obj\Debug\ModelFirstEF.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\EF\ModelFirstEF\ModelFirstEF\obj\Debug\ModelFirstEF.csproj.CopyComplete
+C:\Banu\Infinite\EF\ModelFirstEF\ModelFirstEF\obj\Debug\ModelFirstEF.exe
+C:\Banu\Infinite\EF\ModelFirstEF\ModelFirstEF\obj\Debug\ModelFirstEF.pdb

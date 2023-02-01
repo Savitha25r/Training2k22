@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Core_EF_DBFirst.Models.Employee>
+@{
+    ViewData["Title"] = "GetDetails";
+}
+
+<h1>GetDetails</h1>
+@foreach(var item in Model)
+            {
+                <li>@item.Empid</li>
+                <li>@item.Empname</li>
+                <li>@item.Salary</li>
+                <li>@item.DeptId</li>
+                <br/>
+            }
+

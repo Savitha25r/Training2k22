@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<!--<body>
+    <script>
+        var a=25;
+        var b=15;
+        var c='hi';
+        var lb="<br/>"
+        document.write("a - b =");
+        res=a-b;
+        document.write(res);
+        document.write(lb);
+        document.write("a * b =");
+        res=a*b;
+        document.write(res);
+        document.write(lb);
+        document.write("(a == b ) => ");
+        res=(a==b);
+        document.write(res);
+        document.write(lb);
+        document.write("(a || b ) => ");
+        res=(a || b);
+        document.write(res);
+        document.write(lb);
+        document.write("(a && b ) => ");
+        res=(a && b);
+        document.write(res);
+        document.write(lb);
+        document.write("!(a && b ) => ");
+        res=(!(a && b));
+        document.write(res);
+        document.write(lb);
+        document.write("(a > b ) ? 100 : 200) => ");
+        res=(a > b) ? 100 : 200;
+        document.write(res);
+    </script>
+</body>-->
+
+<head>
+    <script>
+        function over(){
+           // document.write("Mouse Over");
+           console.log("Over");
+        }
+        function out(){
+            console.log('reached out');
+            document.write("Mouse Out");
+        }
+    </script>
+</head>
+<body>
+ <p>Move the mouse to see the effect</p>
+ <div style="width:100px;height:100px;"  onmouseleave="out()"  onmouseover="over()">
+    <p >Para inside Div</p>
+    <h2>Inside the Div Element</h2>
+</div>
+
+</body>

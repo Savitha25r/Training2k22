@@ -1,0 +1,26 @@
+When Data is sent to the view from the controller using ViewBag/ViewData/TempData, it is known as LooslyTyped binding
+
+
+MVC with EF: DB First
+
+Scaffolded View (Template for each DB Crud activities)
+- List
+- Create
+- Edit
+- Delete
+- Details
+
+HTTP Verbs : 
+ - Get (Read/View a pagefrom server )-GetRequest
+ - Post (Send data through a page to the server)-PostRequest  (Gets an empty form and then takes the filled in form)
+ - Edit/Put (update data)Get + post
+ - Delete -(Get + Post)
+ - Patch(multiple data updations)
+
+Passing Data from Views to the Controllers
+------------------------------------------
+ 1. Model Object
+ 2. Parameters -(parameter names should match the column names at the backend)
+ 3. Forms Collection Object
+ 4. Request Object
+ 

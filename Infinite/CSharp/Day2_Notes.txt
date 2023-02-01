@@ -1,0 +1,60 @@
+Data Type Conversions:
+
+1. Implicit Conversions : Lower data type can be put into a higher datatype(compiler based)
+2. Explicit Comversions : Higher data type to a lowerdatatype ()
+
+
+int.tryparse()- can be used to convert string to int without throwing any exception
+float.tryparse() - can be used to convert string to float "   ""  ""
+
+Debugging : Break Point
+  
+Arrays : Continuos memory allocation of a single datatype
+
+  Decision making  
+conditional statements- if else, switch,if,else if
+
+ Jump Statements : break, continue, goto, return, throw etc..
+
+  Iterations - loops (do.. while,exit loop
+ while ..do,-entry loop
+ for, foreach)
+for(i=0;i<n;i++)
+initialization
+condition
+increment or decrement (to change the condition and terminate the loop)
+
+int [] arr= new int[5];
+arr[0]=50; arr[1]=56;  .... arr[4]=80;
+
+int[]arr = new int[4]{50,56,75,67};
+
+int []arr ={50,56,75,60};
+
+System.Array class : supports many functions
+ sort()
+ reverse()
+ copy()
+ length; returns the sixe of the array
+ rank; return the dimension of the array
+
+One dimensional    int [] arr = new int[5];
+
+Two Dimesional     int [,] 2arr = new int[3,4] {{12,32,45,77},
+{30,45,89,10},
+{25,57,5,35}};
+
+Jagged Array : Array of Arrays. An element of  jagged array itself is an array
+
+int [][] jaggedarr = new int[4][];
+
+jaggedarr[0]= new int[] {1,2,3,4};
+jaggedarr[1]=new int[]{5,6,7};
+jaggedarr[2]=new int[]{8,9};
+jaggedarr[3]=new int[]{11,13,14,15,18,20};
+
+
+strings: 
+
+
+

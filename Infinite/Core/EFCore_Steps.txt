@@ -1,0 +1,69 @@
+EF
+
+Packages to be included
+Microsoft.EntityFrameworkCore  (5.0.0)
+Microsoft.EntityFrameworkCore.Relational
+Microsoft.EntityFrameworkCore.SqlServer 
+
+Note: If we just instal the last sqlserver package, the remaining 2 packages are added by default due to dependencies
+
+Microsoft.EntityFrameworkCore.Tools( This is to enable models/context etc in the absence of ADOEntityDataModel wizard
+
+For MVC Application : we need to include another package called
+Microsoft.EntityFrameworkCore.Design
+
+--To verify if all packages are installed succesfully
+type --dotnet ef in the PM console
+
+
+
+For Database First Approach: Give an existing database name and other connection details in the appsettings.json file, and then in the PMConsole type the below command which will map all tables into objects
+
+
+Scaffold-DbContext "Server=LAPTOP-TJJ7D977;Database=InfiniteDB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -outputDir Models
+
+appsettings: after allowedHosts 
+
+"AllowedHosts": "*",
+  "ConnectionStrings": {
+    "InfiniteDBConnection": "Server=LAPTOP-TJJ7D977;Database=InfiniteDB;Trusted_Connection=True;"
+  }
+}
+
+Whenever there are any changes made to the tables, then retype the below command with -Force option
+
+Scaffold-DbContext "Server=LAPTOP-TJJ7D977;Database=InfiniteDB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -outputDir Models -F
+
+
+Register the dbcontext services along with sqlserver services in the startup file as below
+
+//registering our dbcontext class with all the models which is 
+           // specified in the connection string of the appsettings.json file
+            services.AddDbContext<InfiniteDBContext>(options => options.
+            UseSqlServer(Configuration.GetConnectionString("InfiniteDBConnection")));- connection strings name
+
+
+Code First :
+-----------
+Create an web application core (MVC template)
+Repeat the process of including all relevant packages as above.
+-Then create required classes under the Models Folder
+- Create a DBContext class and include all models as DBSets<>
+- Then Create Repository patterns to operate on the models (Interface and the implementor class)
+- Make an Entry in appsettings.json file as follows after allowed Hosts
+
+"AllowedHosts": "*",
+  "ConnectionStrings": {
+    "CoreEmployeeConnection": "Server=LAPTOP-TJJ7D977;Database=EFCoreEmployeeDB;Trusted_Connection=True;"
+  }
+
+-Then Register DbContext services and alo the repository services in the Startup.cs file as below:
+
+//registering the dbcontext services
+            services.AddDbContext<EmployeeDbContext>(options => options.
+            UseSqlServer(Configuration.GetConnectionString("CoreEmployeeConnection")));
+
+            //registering the Repository service interface
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
+- Add a controller with corresponding action methods for crud operations along with relevant views

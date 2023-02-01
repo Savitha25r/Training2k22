@@ -1,0 +1,61 @@
+Polymorphism : 
+1. Static Polymorphism/Early Binding/Compile Time Polymorphism
+
+    - Overloading
+           a)Method Overloading
+           b)Operator Overloading
+
+2. Dynamic Polymorphism/Late Binding/Runtime Polymorphism
+          a)Overriding
+
+
+Binding : Resolving the function calls to the actual functions
+
+Method Overloading: -Having different methods with the same name but different arguments/parameters (Signature)
+- Either the number of parameters or the type of the parameters should be different
+- Seen within the class
+- Just the change of the return type does not qualify the method as overloaded
+- Compiler does Binding
+
+Operator Overloading: int x,y,z; z=x+y;
+
+class class1 {} class1 c1, c2, c3; c3=c1+c2;
+
+Eg :  public int add (int a, int b) { return a+b; }
+      public int add(int a, int b, int c) { }
+      public int add(int a, float f){ }
+      public float add(int a, int b) { } - not an overload
+
+ 
+Method Overriding :- Signature has to be the same across overridden functions/methods
+- Seen across base and derived classes
+- Runtime does the binding
+
+
+CoVariance : Parent Object can point to any child object, but the reverse is not true 
+
+
+
+Types of Classes :
+1. Internal Classes / public Classes
+2. Abstract Classes : Cannot be instantiated. Has to be inherited. Will have atleast one Abstract Method. Can have non-abstract methods also.
+3. Sealed Classes : Concrete Classes /Final classes. They cannot be inherited. Can Instantiate and use it 
+4. Static Classes
+5. Partial Classes
+
+
+Abstract Method: Is a method that does not have definition/implementation/body for the method. Has only the declaration
+
+Interface : are like classes, especially abstract class. The difference being abstract classes can have non-abstract methods, but interfaces cannot.
+-Interfaces can have properties
+- Cannot be instantiated, but can use reference variables
+- Interfaces have to be inherited and implemented by child classes
+- All functions declared in the interface have to be implemented by the derived/sub class, whether you need it or not.
+- One class can inherit from more than one interface 
+- One interface can inherit from other interface/s
+- Interface members are public by default
+
+
+Loops : 1. Initialization of the counter(variable that can keep track of the collection values)
+2. Check the condition becoming false
+3. Change of the counter value (in order to make the condition false, and come out of the loop)

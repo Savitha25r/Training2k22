@@ -1,0 +1,19 @@
+I. Inheritance :   is a relationship
+      1. Single Inheritance
+      2. Multilevel Inheritance
+
+II Composition : has a relationship
+   A Class instead of inheriting can contain an object of another class
+
+
+Operators : 
+Arithemetic (+,-,*,/,%)
+Logical Operators ( and &&, not !, or ||)
+Relational Operators ( <, >,<=,>=,=,<>, !=)
+
+Construction of Objects always starts with the Parent Class
+
+Instantiating a parent class object through the derived clss constructor using the base keyword
+
+Class Parent
+

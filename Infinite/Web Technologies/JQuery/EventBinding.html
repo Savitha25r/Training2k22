@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('div').bind('click',function(event){
+                alert("Hi !! " +  ' '+event.target.innerHTML);
+                alert("The Event Type is :"+ event.type);
+                $('button').click(function(){
+                    $('div').unbind('click');
+                });
+            });
+        });
+    </script>
+    <style>
+        .mydiv{
+            margin:10px;
+            padding: 12px;
+            border:2px solid gold;
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+ <p> Please click on the below div's</p>
+ <div class="mydiv" style="background-color:red">First Div Element</div>
+ <div class="mydiv" style="background-color:green">Second Div Element</div>
+ <div class="mydiv" style="background-color:blue">Third Div Element</div>
+</body>

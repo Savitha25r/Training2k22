@@ -1,0 +1,18 @@
+<DSStudent xmlns="studentnamespace">
+  <Student>
+    <Name>Harini</Name>
+    <Address>Hyderabad</Address>
+  </Student>
+  <Student>
+    <Name>Ramakrishna</Name>
+    <Address>Bangalore</Address>
+  </Student>
+  <Student>
+    <Name>Namitha</Name>
+    <Address>Kolkatta</Address>
+  </Student>
+  <Student>
+    <Name>Banurekha</Name>
+    <Address>Cochin</Address>
+  </Student>
+</DSStudent>

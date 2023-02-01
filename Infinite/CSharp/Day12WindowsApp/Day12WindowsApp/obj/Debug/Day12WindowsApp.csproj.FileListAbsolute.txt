@@ -1,0 +1,10 @@
+C:\Banu\Infinite\CSharp\Day12WindowsApp\Day12WindowsApp\bin\Debug\Day12WindowsApp.exe.config
+C:\Banu\Infinite\CSharp\Day12WindowsApp\Day12WindowsApp\bin\Debug\Day12WindowsApp.exe
+C:\Banu\Infinite\CSharp\Day12WindowsApp\Day12WindowsApp\bin\Debug\Day12WindowsApp.pdb
+C:\Banu\Infinite\CSharp\Day12WindowsApp\Day12WindowsApp\obj\Debug\Day12WindowsApp.csproj.AssemblyReference.cache
+C:\Banu\Infinite\CSharp\Day12WindowsApp\Day12WindowsApp\obj\Debug\Day12WindowsApp.Properties.Resources.resources
+C:\Banu\Infinite\CSharp\Day12WindowsApp\Day12WindowsApp\obj\Debug\Day12WindowsApp.csproj.GenerateResource.cache
+C:\Banu\Infinite\CSharp\Day12WindowsApp\Day12WindowsApp\obj\Debug\Day12WindowsApp.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\CSharp\Day12WindowsApp\Day12WindowsApp\obj\Debug\Day12WindowsApp.exe
+C:\Banu\Infinite\CSharp\Day12WindowsApp\Day12WindowsApp\obj\Debug\Day12WindowsApp.pdb
+C:\Banu\Infinite\CSharp\Day12WindowsApp\Day12WindowsApp\obj\Debug\Day12WindowsApp.MainForm.resources

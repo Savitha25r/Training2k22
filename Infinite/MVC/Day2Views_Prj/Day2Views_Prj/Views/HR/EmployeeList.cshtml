@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Day2Views_Prj.Models.Employee>
+@{
+    ViewBag.Title = "EmployeeList";
+}
+
+<h2>Employee List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Employee Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.Eid</td>
+                    <td>@item.Ename</td>
+                    <td>@item.Salary</td>
+                </tr>
+            }
+    </tbody>
+</table>
+

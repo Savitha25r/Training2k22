@@ -1,0 +1,7 @@
+
+Model state is a collection of name value pairs that conatins error that can originate during Model Binding/Model Validations
+
+Model Validations :
+We need to know 2 things
+ 1. AddModelError() - function/method used to record any model validation error for any specific property
+ 2. ModelState.IsValid

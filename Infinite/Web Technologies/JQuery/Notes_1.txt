@@ -1,0 +1,47 @@
+JQuery : javascript Library
+-Is a lightweight where we write less, but do more
+-Lost of common tasks that usually takes many lines of javascript code are wrapped into methods, that we call with a single line of code
+
+Features:
+HTML/DOM manipulation
+CSS manipulation
+HTML events
+Effects and animations
+AJAX(Asynchronous javascript and xml)
+Utilities
+
+Adding Jquery to web pages
+
+1. download the jquery library from jquery.com
+  <script src="jquery-3.4.1.min.js"></script>
+
+2. include from the CDN, like google or microsoft
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/JjQuery/jquery-3.4.1.min.js"></script>
+
+
+Syntax:is tailor made for selecting html elements and performing some actions on the element/s
+
+basic syntax: $(selector).action()
+
+$ sign : is to define/access jquery
+selector : is to query or find HTML elements
+action() : to be performed on the found element/s
+
+$("p").hide()  - hides all <p> elements
+
+-Document Ready Event
+$(document).ready(function(){.......});
+
+Events : Mouse Events, Keyboard events, form events, document events
+
+Methods: hide()  -- option speed
+show()
+toggle()
+fadein()
+fadeout()
+slide()
+Animate()
+callback
+chaining

@@ -1,0 +1,61 @@
+Exception Handling in Procedure:
+
+Error Information has
+
+1. Error Number : is a unique identifier for each and every error that occurs in SQL server. The value will be below 50000 for pre defined errors, and must be above 50000 for user defined errors
+
+2. Error Message : It is a brief piece of information describing the error that occured. The maximum size is 2047 characters 
+
+3. Severity Level : Tells the importance of the error that ranges between 0 and 24
+  0-9 : are not severe. Can be considered as status or information messages
+  11-16 : Indicates errors that are created by the user
+  17-19 : Indicates software errors, that cannot be corrected by the user and hence has to be reported to the system admin
+  20-24 : Fatal errors, that can damage system and the database. The system terminates the connection with the database
+
+4. State : Is an arbitrary number not important. It can range from 0 to 127. It is useful, when the same error has occured in multiple place
+
+Raierror syntax :  raiserror(errorid/errormessage,severity,state)
+
+Throw syntax :
+  throw error id, errormsg, state
+
+
+Cursors : are in memory storage that can hold the resultset of the query. It allows to process row by row
+It is of 2 types 1. Implicit cursor that is crreated and managed by the Database engine 2. Explicit Cursors which is created by the user.
+
+Steps of cursor life cycle
+ 1. Declare a cursor
+ 2. Open the cursor
+ 3. Fetch Data until empty
+ 4. Close the cursor
+ 5. Deallocate
+
+Types of Cursors :
+ 1. Forward only cursor : moves from 1st record to next only. Cannot go to previous record
+ 2. Static cursor :  Can move forward and backward within the cursor
+ 3. Dynamic cursor : By default are scrollable. There are very sensitive to any changes to the data source. They support DML
+
+
+Triggers : Are like procedures or functions, but differ in the way they get executed. They are fired on any specific event (DML operations)
+
+-They can be either at database level or table level
+-We can have triggers for insert,update and delete 
+- There are 3 types of triggers
+   - After trigger 
+   - Before Trigger
+   - Instead of Trigger
+
+2 Magic Tables are created when we work with triggers. They are only accesible within the trigger. They are called as inserted and deleted 
+
+Syntax for trigger : create trigger <triggername>
+on <tablename>
+for <event(insert/update/delete)>
+as
+begin
+
+--sql statements
+end
+
+
+
+

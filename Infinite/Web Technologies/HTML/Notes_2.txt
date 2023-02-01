@@ -1,0 +1,39 @@
+Lists :  3 types
+ 1. Ordered List  - <ol>
+ 2. Unordered List - <ul>
+ 3. Descriptive List <dl>
+
+Lists can be nested to multi levels
+
+<div> and <span> - non-semantic container tags
+
+Div is a block line tag that is used to group larger chunks of code(other tags)
+
+<div>
+
+
+
+</div>
+
+Span is an inline tag that can contain fewer chunks of code
+
+<span>     /<span>
+ 
+<Table> Semantic tag
+
+<Form> on form being submitted, take the user to a html page called as Regn.html
+  Registration successfull... We will get back to you...
+
+
+Inline style
+Internal Style
+
+h2{color:red;}
+.class1{color:red;   }
+.class2{color:red;
+
+h2,.class1,.class2{color:red;  }
+
+HTML 5 : Enriched features that makes it easy and interactive for designers/developers/users
+-It helps in better designs of forms and web applications that work offline
+-Provides advanced features which would otherwise involve writing javascript code.

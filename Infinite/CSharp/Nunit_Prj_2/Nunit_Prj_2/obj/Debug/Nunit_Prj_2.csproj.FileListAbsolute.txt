@@ -1,0 +1,6 @@
+C:\Banu\Infinite\CSharp\Nunit_Prj_2\Nunit_Prj_2\bin\Debug\Nunit_Prj_2.exe.config
+C:\Banu\Infinite\CSharp\Nunit_Prj_2\Nunit_Prj_2\bin\Debug\Nunit_Prj_2.exe
+C:\Banu\Infinite\CSharp\Nunit_Prj_2\Nunit_Prj_2\bin\Debug\Nunit_Prj_2.pdb
+C:\Banu\Infinite\CSharp\Nunit_Prj_2\Nunit_Prj_2\obj\Debug\Nunit_Prj_2.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\CSharp\Nunit_Prj_2\Nunit_Prj_2\obj\Debug\Nunit_Prj_2.exe
+C:\Banu\Infinite\CSharp\Nunit_Prj_2\Nunit_Prj_2\obj\Debug\Nunit_Prj_2.pdb

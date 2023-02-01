@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <style>
+            img{
+                position: relative;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $('button').click(function(){
+                    $('img').animate({
+                        top:300,
+                        left:300
+                    });
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <button>Start Animation</button>
+        <p>
+            <img src="C:\Banu\Infinite\Web Technologies\Images\Doll.jpg">
+        </p>
+    </body>
+</html>

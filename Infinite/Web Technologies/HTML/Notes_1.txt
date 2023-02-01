@@ -1,0 +1,63 @@
+HTML: Hyper Text MarkUp Language
+
+What is World Wide Web ?
+ 
+ Network Of Information
+
+   - A Uniform naming scheme for locating resources on the web (URI's)
+
+   - Protocols, for accessing the resources over the web (HTTP)
+
+   - Hypertext, for easy navigation among resources (HTML)
+
+URI's : 
+Every resource that is available on the web is
+  - Html document, image,video clips, program etc
+  - has an address that may be accessed by URI (Uniform Resource Identifier)
+
+Eg : https://www.Infinite.com/Mypage
+ URIs typically consists of 3 pieces of info
+
+  1. The protocol
+  2. The name of the machine hosting the resource (Since ipaddress are difficult to remember, we give domain name)
+ 3. The name of the resource itself
+
+Anatomy of Web Page :
+ HTML + CSS + Javascript = Content + Style + Behaviour
+
+Html : Is the LifeBlood of the WWW. it represents the content or data the user is looking for
+
+CSs : That defines how web pages should appear in the browser. No plain HTML, do it in style
+
+Javascript : Gives Behaviour to html data . It can be activated based on user interaction or can be behind the scene
+   Interaction to the server on user action
+   Validation of user data
+
+
+WebSite :  front-end interface through which the public interacts with the business online
+          is like a foundation and can host several web applications
+          We can have blogs, message boards, photo gallery etc. of webapplications under website
+
+WebApplication: Services that are specific to a business need. Eg : accounting packages, ERP, Stock Management, Banks
+
+W3Consortium : Founded by Tim Berners lee in 1994
+
+HTMl : works with pre built tags
+ Tags are either paired or unpaired
+
+<html> </html>
+
+<br/>
+
+Semantic Tags - Clearly decribe its meaning to both the browser and the developer.
+Non - Semantic Tags : Informs nothing about the tag
+
+Tags/ Elements and attributes and values
+
+Document/html styling is of 3 types
+  1. Inline Style
+  2. Internal Style
+  3. External Style
+
+
+  

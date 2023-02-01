@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <style>
+        p{
+            background-color: hotpink;
+            font-size: 24px;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('p').slideToggle("slower",function(){
+                    alert("the slide toggle effect completed..");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <p> Hey this is a paragraph</p>
+    <button>Click to Toggle</button>
+</body>

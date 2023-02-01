@@ -1,0 +1,75 @@
+ASP.Net : Is a web development platform, which provides a programming model, comprehensive software infrastructure and various services required to build robut web applications for PC, as well as mobile devices
+
+Other Technologies to build web applications
+
+.PHP
+.Java
+.CGI
+.Perl
+.Ruby on Rails
+
+All web applications have to be hosted on a web server
+   -IIS 
+   -Tomcat
+   -Apache
+   -Websphere
+   -JellyFish
+-Maintenance, support and patches are easier to provide
+-Only Browser is required on the client machine to access the web application
+-Accesible from anywhere, with internet
+-Work on a client/server architecture
+
+Web Form/Page :
+  has  2 files viz designerfile and code behind file
+ code behind file has an extension of either aspx.cs or aspx.vb
+designer file contains extension of aspx.designer.cs or aspx.designer.vb
+- A web form is associated with its code file using the @page directive
+
+Life Cycle of a Page :
+S - Start the page
+I - Initialization (all controls are initialized)
+L - Load
+V - Validate
+E - Event Handling
+R - Render (Css/styles/UI is applied)
+
+Page Events : 
+Pre-Init
+Init
+InitComplete
+OnPreLoad
+Load
+LoadComplete
+OnPreRender
+Render
+Unload
+
+Application Life Cycle :
+
+ApplicationStart
+ObjectCreation
+HttpApplication 
+   HttpContext
+   Request
+   Response
+Dispose
+ApplicationEnd
+
+Inline Code
+Code Behind
+
+Trace : is like a debugger which traces all the request and response activities. We should enable the trace in the web.config file
+
+<system.web>
+<trace enabled="true"/>
+....
+...
+</system.web>
+
+When we enable trace, we will have a file with trace.axd created.
+
+
+Validations : Using built in Validation Controls
+we can have the basic validation getting executed through the client side javascripts.
+
+Note : Set the unobtrusive mode value to none in web.config file inorder to have the javascripts executed

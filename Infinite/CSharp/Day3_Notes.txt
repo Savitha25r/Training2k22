@@ -1,0 +1,59 @@
+string : strings are collection of characters
+Memory allocation is on the heap
+They are predefined reference types
+strings are immutable
+strings have fixed size
+
+Functions:
+Copy()
+Concat() -  String.Concat(s1,s2)
+ToChatArray()- converts string to an character array
+replace()
+
+
+stringbuilder class : a mutable string of characters
+
+Structures : are User Defined Value Type
+
+int marks;
+int[]marks=new int[10]
+
+structure marks
+{
+   int english;
+   int maths;
+   int science;
+   int social;
+   int sanskrit;
+
+}
+
+marks[] stdmarks= new marks[20]
+
+int a=90;
+int b;
+b=a;
+a=100;
+cw(a, b)
+
+
+Methods and Parameters
+1. Value Type (call by value)
+2. Ref type (call by reference)
+3. out parameters : when we want more return values from a function
+4. paramarray (parameter array) - helps in giving variable number of arguments/parameters, arraylist seperated by a comma, or no arguments
+params is a keyword. It should be the last in the argument list.
+Only one param is allowed /method
+
+
+
+
+
+
+
+
+
+
+
+
+

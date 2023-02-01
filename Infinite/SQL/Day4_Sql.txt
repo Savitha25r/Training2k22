@@ -1,0 +1,271 @@
+select * from employee
+select * from dummy
+select * from department
+
+-- 1st Transactions -- except delete employee, all will be rolled back
+
+begin transaction
+
+ delete from employee where empid=12   -- has to be comitted
+ select * from employee
+ save tran s1
+ update employee 
+ set deptid=1 where empid=1
+ insert into dummy values('Transactiondummy',2)
+ select * from dummy
+ save tran s2
+ update Department set city='Chennai' where deptid=3
+ select * from department
+ rollback tran s1
+ commit
+
+
+--2 nd transaction -- last update department alone will be rolled back
+
+--Transactions
+begin transaction 
+ insert into employee values(12,'Harshini',12600,'Female',4,2222222)
+ select * from employee
+ save tran s1
+ update employee 
+ set deptid=1 where empid=1
+ insert into dummy values('Transactiondummy',2)
+ select * from dummy
+ save tran s2
+ update Department set city='Chennai' where deptid=3
+ select * from department
+ rollback tran s2
+ commit
+
+--3rd transaction  -- all statements will be rolled back
+
+begin transaction 
+ insert into employee values(13,'Harshini',12600,'Female',4,2122222)
+ select * from employee
+ save tran s1
+ update employee 
+ set deptid=2 where empid=1
+ insert into dummy values('Tdummy',25)
+ select * from dummy
+ save tran s2
+ update Department set city='Chennai' where deptid=3
+ select * from department
+ rollback   
+
+
+--rank()
+ create table StdMarks(
+ stdname varchar(30),
+ subjects varchar(20), 
+ marks int)
+
+ insert into stdmarks values('Shreedhar','Maths',80),('Shreedhar','Science',70),('Shreedhar','English',60),
+ ('Ramya','Maths',75),('Ramya','Science',85),('Ramya','English',60),
+ ('Haritha','Maths',70),('Haritha','Science',70),('Haritha','English',80)
+
+ select * from StdMarks
+
+ --query with row_number()
+ select stdname,subjects,marks,ROW_NUMBER()over(order by marks desc) Ranking from stdmarks
+
+ --query with rank()
+  select stdname,subjects,marks,Rank()over(order by marks desc) Ranking from stdmarks
+
+  --query with dense_rank()
+ select stdname,subjects,marks,dense_Rank()over(order by marks desc) Ranking from stdmarks
+
+ --query using rank() with partition
+ --subject wise
+  select stdname,subjects,marks,Rank()over(partition by subjects order by marks desc) Ranking from stdmarks
+
+  select stdname,subjects,marks,dense_Rank()over(partition by subjects order by marks desc) Ranking from stdmarks
+
+  --student wise 
+  select stdname,subjects,marks,Rank()over(partition by stdname order by marks desc) Ranking from stdmarks
+
+
+
+--Procedures
+  --eg 1  all employees
+  create or alter procedure proc1
+  as
+  begin
+   select * from employee
+  end
+
+  sp_helptext proc1
+
+  --to execute the above procedure
+  execute proc1  -- or
+
+  exec proc1
+  --drop procedure proc1
+
+  --eg 2 few employees
+  create or alter procedure FewEmployee
+  as
+  begin
+   select * from employee where deptid in(1,3)
+  end
+
+  exec FewEmployee
+  --eg 3 procedure with input parameter
+
+  create or alter procedure getEmployeebyId @eid int
+  as
+  begin
+  select * from employee where empid=@eid
+  end
+
+  exec getEmployeebyId 3
+
+  --eg 4
+  --procedure with output parameter
+  create or alter procedure getEmployeeSalary (@name varchar(30), @sal float output)
+  as
+  begin
+   select @sal=salary from employee where empname=@name
+   set @sal=@sal+500
+  end
+
+  --executing the above procedure using method 1
+  declare @retsal float
+  execute getEmployeeSalary 'Varsha', @retsal output
+  print @retsal
+  set @retsal=@retsal-500
+  print @retsal
+
+  --executing the above procedure using method 2/ changing the order
+  declare @sal1 float
+  execute getEmployeeSalary @sal = @sal1 output,@name='Varsha'
+  print @sal1
+
+  --procedure with return type
+  --eg 1
+  create or alter procedure getMarks(@name varchar(20),@sub varchar(20))
+  as
+  begin
+  return (select marks from stdmarks where stdname=@name and subjects=@sub)
+  end
+
+  --to execute the above proc
+  declare @marks int
+  execute @marks=getMarks 'Niranjan','Maths'
+  print @marks
+
+ --eg 2
+ create or alter procedure getno_ofemployees(@did int)
+ as
+ begin
+ return (select count(*)empid from employee where deptid=@did)
+ end
+
+ declare @totemp int
+ exec @totemp=getno_ofemployees 2
+ print @totemp
+
+ --eg 3 return values other than integer
+ create or alter procedure getno_ofemployees_new(@did int)
+ as
+ begin
+return select deptname from department where DeptId=@did
+ end
+
+ declare @name varchar(20)
+ exec @name=getno_ofemployees_new 3
+ print @name
+
+
+--functions
+ --eg scalar function
+ create function Add2nos(@a int, @b int)
+ returns int
+ as
+ begin
+  return @a+@b
+ end
+
+ --to execute the above function
+ --use 2 part qualification
+ select dbo.Add2nos(5,10) Total--or
+ print dbo.Add2nos(20,20) 
+
+ print 'The Sum of 2 nos :' + cast(dbo.Add2nos(20,20)as varchar(max))
+
+ --eg 2
+ create or alter function display()
+ returns varchar(max)
+ as
+ begin
+ return 'Hello and Welcome to the concpets of Sql Functions.'
+ end
+
+ select dbo.display()
+
+ --eg 3
+ --find the area of a rectangle
+ create or alter function Rect_Area(@len int,@bread int)
+ returns int
+ as
+ begin
+ declare @area int
+ set @area=@len * @bread
+ return @area
+ end
+
+ select dbo.Rect_Area(5,6) as 'Rectangles Area'
+
+ --eg 4
+ --given a dept id, get the name of the dept
+ create or alter function getDept(@id int)
+ returns varchar(max)
+ as
+ begin
+ return (select deptname from Department where deptid=@id)
+ end
+
+ select dbo.getDept(3)
+
+ --inline table valued functions
+ create or alter function inlinetablefunc1(@did int)
+ returns table
+ as
+  return (select Empid,Empname,Salary,deptid from employee  
+         where deptid=@did)
+
+select * from inlinetablefunc1(2)
+
+--multi statement table valued function
+create or alter function GetEmployeeByname(@did int)
+returns   -- returns data captured in a temporary table structure
+@EmpByName table(
+EmployeeNo int,
+Ename varchar(30),
+Esalary float,
+EPhone varchar(15)
+)
+as
+begin
+     insert into @EmpByName select Empid,Empname,Salary,Phone from Employee where deptid=@did
+   --check if data from employee table that matched the deptid, is inserted successfully into the temp table
+     if @@ROWCOUNT=0
+     begin
+       insert into @EmpByName values(0,'No Employees in dept',0,null)
+     end
+return
+end
+
+select * from GetEmployeeByname(6)
+
+
+//select Empid,Empname,Salary,Phone from Employee where deptid=6
+
+
+--DML Operations thru Procedures
+create procedure insertproc (@dname varchar(20),@dage int)
+as
+begin
+ insert into dummy values(@dname,@dage)
+end
+
+exec insertproc 'thru proc',100

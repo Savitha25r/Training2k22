@@ -1,0 +1,14 @@
+C:\Banu\Infinite\Core\ConsoleApp1_Core\ConsoleApp1_Core\bin\Debug\netcoreapp3.1\ConsoleApp1_Core.exe
+C:\Banu\Infinite\Core\ConsoleApp1_Core\ConsoleApp1_Core\bin\Debug\netcoreapp3.1\ConsoleApp1_Core.deps.json
+C:\Banu\Infinite\Core\ConsoleApp1_Core\ConsoleApp1_Core\bin\Debug\netcoreapp3.1\ConsoleApp1_Core.runtimeconfig.json
+C:\Banu\Infinite\Core\ConsoleApp1_Core\ConsoleApp1_Core\bin\Debug\netcoreapp3.1\ConsoleApp1_Core.runtimeconfig.dev.json
+C:\Banu\Infinite\Core\ConsoleApp1_Core\ConsoleApp1_Core\bin\Debug\netcoreapp3.1\ConsoleApp1_Core.dll
+C:\Banu\Infinite\Core\ConsoleApp1_Core\ConsoleApp1_Core\bin\Debug\netcoreapp3.1\ConsoleApp1_Core.pdb
+C:\Banu\Infinite\Core\ConsoleApp1_Core\ConsoleApp1_Core\obj\Debug\netcoreapp3.1\ConsoleApp1_Core.csproj.AssemblyReference.cache
+C:\Banu\Infinite\Core\ConsoleApp1_Core\ConsoleApp1_Core\obj\Debug\netcoreapp3.1\ConsoleApp1_Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Banu\Infinite\Core\ConsoleApp1_Core\ConsoleApp1_Core\obj\Debug\netcoreapp3.1\ConsoleApp1_Core.AssemblyInfoInputs.cache
+C:\Banu\Infinite\Core\ConsoleApp1_Core\ConsoleApp1_Core\obj\Debug\netcoreapp3.1\ConsoleApp1_Core.AssemblyInfo.cs
+C:\Banu\Infinite\Core\ConsoleApp1_Core\ConsoleApp1_Core\obj\Debug\netcoreapp3.1\ConsoleApp1_Core.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\Core\ConsoleApp1_Core\ConsoleApp1_Core\obj\Debug\netcoreapp3.1\ConsoleApp1_Core.dll
+C:\Banu\Infinite\Core\ConsoleApp1_Core\ConsoleApp1_Core\obj\Debug\netcoreapp3.1\ConsoleApp1_Core.pdb
+C:\Banu\Infinite\Core\ConsoleApp1_Core\ConsoleApp1_Core\obj\Debug\netcoreapp3.1\ConsoleApp1_Core.genruntimeconfig.cache

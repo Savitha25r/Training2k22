@@ -1,0 +1,48 @@
+Threads: A path of Execution. A light weight process
+Can be STA(single threaded apartment) or MTA(Multi threaded apartment)
+
+Way 1:
+ 
+//first creating an object of the delegate and manking it point to DisplayNumbers Method
+            ThreadStart ts = new ThreadStart(DisplayNumbers);
+            //passing the threadstart delegate object as a parameter to thread class Constructor
+            Thread t4 = new Thread(ts);
+            t4.Start();
+
+Way 2: Thread t4= ne Thread(new ThreadStart(DisplayNumbers));
+
+Way 3: 
+Thread t4= new Thread(delegate(){DisplayNumbers();})
+
+Way 4:
+Thread t4= new Thread(()=>{DisplayNumbers();});
+
+Way 5:
+Thread t4= new Thread(()=>DisplayNumbers());
+
+Way 6:
+
+//Using Anonymous Method
+Thread t4= new Thread(()=>{
+for(int i=1;i<=10;i++)
+{
+  cw(i);
+}
+});
+
+
+Files and Serialization : Various class are supported in DotNet Framework to read and write varieties of data viz. ByteReader/Writer, BinaryReader/Writer, BufferedReader/Writer, StringReader/Writer, StreamReader/Writer, FileReader/Writer
+
+- FileInfo - to read all files
+- DirectoryInfo - to read files from a directory
+
+Serialization : is a process of bringing an object into a form that can be written on a stream. Or it is a process of converting an object into a form, so that it can be stored on a file,database, memory or transferred across network
+
+Deserialization : is a reverse process of Serialization
+
+
+Types : 
+ 1. Binary Serialization
+ 2. SOAP Serialization
+ 3. XML Serialization
+ 4. JSON Serialization

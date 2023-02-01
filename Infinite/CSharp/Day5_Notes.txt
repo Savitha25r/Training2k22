@@ -1,0 +1,29 @@
+I Types :
+
+Variables : One that can be changed 
+
+static Variables: Are accessible through out the class as a class member. We can change the values of the static variables
+
+ReadOnly Variables : Are declared with readonly keyword.
+                     Cannot be changed after initialization
+                     Can be initialized either at the time of declaration or in the constructor
+                     Constructor Initialization will override declaration initialization
+                     Are similar to non-static variables. They are maintained as seperate copies in each object.
+                     The difference between read-only and non-static variables is that the readonly cannot be changed, while the non-static can be changed
+
+Constant Variables : Constants are like readonly variables, but unlike readonly, they have to be initialized at the time of declaration itself.
+                     Once initialized, cannot change the value
+                     It is comparable to static variables, in the sense that both are available as a single copy for the entire class.
+                     The difference is that static variables can undergo changes, but constants cannot.
+ 
+II Properties: Are named members of the class, structures and interfaces
+               Member Variables/Data Members are called as Fields in class or structure
+               Properties are extension of fields.
+               They can be accessed using the accessors by which you can read or write values of the private fields 
+               Properties do not name the storage locations. Instead they have accessors(get and set) that read, write or compute values
+ 
+
+OOPS - 1. Encapsulation - Combining Data and the Function together as a Unit
+       2. Abstraction -  Exposing only the required members and hiding the not required details/implementations/data
+       3. Inheritance - A provision for extension 
+       4. Polymorphism - Exhibiting multiple traits

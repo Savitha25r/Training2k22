@@ -1,0 +1,52 @@
+JSON : Javascript Object Notation
+-Lightweight for data-interchange
+-Content negotiation
+-Easy to use
+-Lang independent
+-Supports datastructures like arrays, objects
+-Executes faster on the server than xml
+-Is enclosed within {}
+-Is a key value pair (where keys are mostly strings)
+-Is a simple trext based format
+
+Eg:
+{
+  "Courses":[{"Name":"CSharp",
+              "Duaration":"40hrs",
+              "Fees":8000
+},
+{ , ,   },  { ,  , }  ],
+
+"InstituteName":"Infinite Technologies",
+"YearsofExp" : 20}
+             
+
+Disadvantages: No Security
+               No Error Handling
+
+
+DataType support : string, number, object, boolean,array, null
+
+Not Supported Datatypes : date, undefined, function
+
+<employee>
+ <name>Banurekha</name>
+ <address>aaaa</address>
+
+</employee>
+
+{"employee":{"name":"Banurekha","city":"Chennai","salary":45000,"dept":null,"isfulltime":true}}
+
+
+
+
+class employee{
+string name="AA";
+string city ="BB";
+float salary=3000;
+}
+
+employee e= new employee();
+cw(e.name + e.city + e.salary); AA BB 3000
+
+

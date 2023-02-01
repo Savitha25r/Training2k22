@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--Sample-->
+<!--<html>
+    <head>
+   <script lang="Javascripts">
+    function MsgBox(textstr){
+        //simple function that takes one parameter of any type
+        alert('Hello' + ' '+textstr);
+    }
+   </script>
+    </head>
+</html>
+<body>
+   <form>
+        <input type="text" name="txt1">
+        <input name="submit" type="button" value="Click Here" ondblclick="MsgBox(form.txt1.value)">
+    </form>
+  
+</body>-->
+
+<!--Eg. 1-->
+<!--<html>
+    <body>
+    <h1>Example 1</h1>
+    <button type="button" onclick="document.write(5+10)">Try me</button>
+    </body>
+    </html>-->
+
+<!-- Eg. 2-->
+
+<body>
+    <h2> Let us see what Java script Can do</h2>
+    <p id="num">Javascripts can change the HTML Document</p>
+    <p id="str">Name :</p>
+    <p id="obj">Object Info :</p> 
+    </body>
+    <script>
+        var length=10;
+        var names="Abdul Kalaam";
+        var ob={fname:"Swamy",lname:"Vivekananda"};
+       /* document.getElementById("num").innerHTML=length;
+        document.getElementById('str').innerHTML=name;
+        document.getElementById('obj').innerHTML=ob.fname + " "+ob.lname;*/
+    </script>
+
+<button type="button" onclick="document.getElementById('num').innerHTML=length">Click me for Length</button>
+<button type="button" onclick="document.getElementById('str').innerHTML=names">Click me for Name</button>
+<button type="button" onclick="document.getElementById('obj').innerHTML=ob.fname + ob.lname">Click me for Object Info</button>
+</body>

@@ -1,0 +1,32 @@
+        Design Patterns and Principles
+        Dependency Injection using Unity Framework
+        Unit Testing with TDD approach
+        
+        RDBMS Fundamentals Concepts
+        Normalization Concepts
+        SQL Server Overview 
+        Creating Tables and Data Types
+        Creating Databases 
+        Enforce Data integrity
+     
+        Partitions and Rank Function
+        Retrieving and Modifying Data
+        JOINS
+        T-SQL PROGRAMMING
+        Variable Declarations
+        IMPLEMENTING FUNCTIONS
+        IMPLEMENTING STORED PROCEDURES
+        IMPLEMENTING TRIGGERS
+        IMPLEMENTING INDEXES
+        IMPLEMENTING CURSORS
+        Transaction in SQL SERVER
+
+        Data-Centric Applications and ADO.NET 
+        Connecting to Data Sources 
+        Performing Connected Database Operations
+        Building Datasets
+        Reading and Writing XML with ADO.NET
+
+
+
+

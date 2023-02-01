@@ -1,0 +1,65 @@
+<html>
+    <!--<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+
+        </script>
+        <script>
+            $(document).ready(function(){
+               $('button').click(function(){
+               // $('p').hide();
+              //$('#test').hide();
+               //$(this).hide();
+               $('#test1').hide();
+               }) ;
+            });
+        </script>
+    </head>
+    <body id="test1">
+      <h2>Heading 2</h2>
+      <p> Paragraph 1</p>
+      <p id="test">Another Paragraph</p>
+      <button>Click here</button>
+    </body>
+</html>-->
+
+<!-- Eg 2
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+
+    </script>
+    <script>
+        $(document).ready(function(){
+            //$("p,h1").click(function(){
+                $('p').click(function(){
+                $(this).hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Head 1</h1>
+    <p>If you click me, i will disappear</p>
+
+    <p>Click me away</p>
+    <p>Click me toooo....</p>
+</body> -->
+
+<head>
+    <script>
+        function fn1(){
+            alert("hi");
+            var elem= document.getElementById('d1');
+             alert('h2');
+             elem.blur=true;
+             elem.innerHTML="I am an Element";
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <div id="d1" style="background:yellow;height:40px;width:100px">HELLO</div>
+        <br/><br/>
+    <div style="background:green;height:80px;width:100px;color:yellow;">WORLD</div>
+    <input type="button" value="clickme" onclick="fn1()">
+    </form>
+</body>

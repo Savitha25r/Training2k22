@@ -1,0 +1,37 @@
+implicitly typed :
+
+var : We need to assign a value to a var type while declaring itself. Once assigned cannot change the type
+
+dynamic : An object that remains dynamic, but can take up any type and convert at the runtime. It has an overhead on Performance. Hence to limit usage of dynamic type. 
+
+Classes and Objects : Class is a unit of all field and methods needed for the application.
+
+Objects : are the instances of the class, which are real and workable.
+
+Constructors : Are special functions of a class
+- They have the same name as that of the class
+- They have to be public or internal
+- They do not have any return type
+- They can be overloaded
+- They are used to initialize fields
+- They are called during object creation
+
+Destructors: Is a special function of a class(only one/class)
+- It has the same name as that of the class, but preceded with a tilde(~) symbol
+- It cannot have return types
+- It cannot be overloaded
+- It deallocates the object and hence the memory
+- We cannot call them
+
+When a class does not have a constructor of its own, the system provides a default constructor
+
+-- Class Members are private by Default
+-- Classes are internal by default
+Access Specifiers : 
+1. private : Accessible only in the class where it is declared
+             Not Accessible anywhere else
+2. public :  Accessible anywhere (within the assembly or other assemblies with or without derivation). But is accessible only with the object
+3. internal : It acts exactly like a public specifier, but allows access only within the same assembly.
+4. protected : Protected members of class are accessible within class, and all its derived classes irrespective of the assembly, where they are
+5. internal protected or protected internal :  Is a combination of both internal and protected. It is accessible in all the classes of the same assembly, whether or not we derive the class where internal protected is declared. It acts like protected outside the assembly if we derive.
+

@@ -1,0 +1,39 @@
+- Autoproperty Initializers : with C#6.0, we have a possibility of initializing the properties along side the declaration, with the options of enabling or disabling access of the properties using private {set;get;}, protected {set;get;}
+
+- Dictionary : Is comparable to Hashtable, that both use key value pair, but differ 
+  - Dictionary is generic and hence and have specific datatype for key and value.
+  - Because of the above method, they are faster when compare d to HashTable. (No conversion required)
+  - Dictionary throws error if the key is not found, whereas HahTable will return a null
+
+- Exception Filters : Allows to specify a condition clause for each catch block
+   - To use ecxeption filters, we need to declare the filter in the same line as that of the catch block declaration
+   - If the condition evaluates to true, then catch block will be executed, else the exception continues
+
+Expression bodied members : A feature introduced in c#6.0
+  It simplifies the syntactical expression and helps to reduce the no.of lines of code.
+ - It can be used to define properties and methods
+ - =>(fat arrow/lambda expressions) is used which can get rid of the curly braces and return keyword
+   
+public bool IsEven(int x)
+{
+
+if(x%2==0)
+{  
+cw("It is Even");
+return true;
+}
+else
+return false;
+}
+
+
+public string IsEvenNo(int n)=>$"is the Given Number{n} even " + IsEven(n);
+
+execution  string s= shape.IsEvenNo(4);
+cw(s);
+public void IsEvenNo(int n)=>Cw("is the given Number {n} even ? :" + IsEven(n));
+shape.IsEvenNo(4);
+
+InLine function : Few lines of executable code that needs to be executed only once can be written without a function name
+
+

@@ -1,0 +1,1 @@
+This is a sample file from where we can read the contents using various file class objects in CSharp.We are Learning Files Concept of cSharp

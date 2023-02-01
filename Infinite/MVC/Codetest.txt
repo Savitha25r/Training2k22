@@ -1,0 +1,18 @@
+Code Challenge 
+
+Time : 60 mts
+
+1. Develop an MVC application 
+
+2. Connect to the backend database Northwind using database first approach.
+
+3. Create a controller called CodeController.(Empty Controller only)
+
+4. Create 2 action methods
+  1. First action method should return all customers residing in Germany
+
+  2. Second action method should return customer details with an orderId==10248
+
+Create required Views to display the output
+
+Hint: Use Linq to construct the query 

@@ -1,0 +1,7 @@
+C:\Banu\Infinite\ADO\Day1_ADO_Basic\Day1_ADO_Basic\bin\Debug\Day1_ADO_Basic.exe.config
+C:\Banu\Infinite\ADO\Day1_ADO_Basic\Day1_ADO_Basic\bin\Debug\Day1_ADO_Basic.exe
+C:\Banu\Infinite\ADO\Day1_ADO_Basic\Day1_ADO_Basic\bin\Debug\Day1_ADO_Basic.pdb
+C:\Banu\Infinite\ADO\Day1_ADO_Basic\Day1_ADO_Basic\obj\Debug\Day1_ADO_Basic.csproj.AssemblyReference.cache
+C:\Banu\Infinite\ADO\Day1_ADO_Basic\Day1_ADO_Basic\obj\Debug\Day1_ADO_Basic.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\ADO\Day1_ADO_Basic\Day1_ADO_Basic\obj\Debug\Day1_ADO_Basic.exe
+C:\Banu\Infinite\ADO\Day1_ADO_Basic\Day1_ADO_Basic\obj\Debug\Day1_ADO_Basic.pdb

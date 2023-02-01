@@ -1,0 +1,38 @@
+Exception Handling : 
+
+-Typical way to handle exceptions are by using 
+try{} catch{} finally{}blocks
+-Framework supports handling exceptions through 2 events
+
+  1. Page_Error
+  2. Application_Error
+  3. Custom Error of HTTP status codes
+
+
+Order of exception handlers execution
+
+Page_Error()
+Application_Error()
+Custom Errors
+
+--------------------------------------------------------
+
+Web Services: Software Service that uses XML for data excahnge, and also use SOAP protocol(Simple Object Access Protocol) to interact with the web service
+
+-Web Services atr Language Independent, Platform Independent, Protocol Independent
+-Eg: A Dotnet Webservice can be consumed by a console app, a windows app, web app etc.
+-The consumer/client can be any one(Java web application or a dotnet console application)
+
+
+various Technology used in web Service:
+1. XML - for data interchange
+2. SOAP - Communication between webservice and the client/consumer
+3. WSDL : Web service description lang.
+4. UDDI : Helps in searching a particular webserveice over the net(which has been registered)
+
+We need to create a webservice which has an extension .asmx
+
+
+
+
+

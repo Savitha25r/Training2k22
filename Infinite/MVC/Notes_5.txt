@@ -1,0 +1,20 @@
+HTML Helpers : Are MVC framework supported classes to create/generate Html elements on the view
+
+Types of classes
+-Standard HtmlHelpers  @html.Label("Enter Name")
+                       @html.TextBox("txtname")
+-Templated HtmlHelpers
+   - Display Templates 
+      1. @html.Display("UserName") - Not strongly typed View
+      2. @html.DisplayFor(model =>model.UserName) - strongly typed view (for complex type models)
+      3. @html.DisplayForModel() - strongly typed view that automatically follows the model
+      
+   - Editor Templates
+      1. @html.Editor("UserName")
+      2. @html.EditorFor(model =>model.UserName)
+      3. @html.EditorForModel()
+
+-Custom Helpers
+   1. Static helpers
+   2. Extention Method Helpers
+   3. Razor Syntax @helper

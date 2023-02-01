@@ -1,0 +1,45 @@
+Interface/s: 
+
+Explicit Implementation of Interface
+
+
+Exceptions: Unhandled errors at the run time(logical errotrs, format errors)
+
+-They provide a consistent mechanism for identifying and responding to error conditions. Effective exception handling makes the code robust and easier to debug.
+-They are debugging aid because they answer
+    1. What went Wrong
+    2. Where did it go wrong
+    3. Why did it go wrong
+
+try{} - Block that has the executable statements that might lead to exceptions
+catch {} - Block that handles the exception by giving meaningful error messages
+finally{}- Block that gets executed, whether or not there is any exception. This block is used for clean up activities
+
+Note: All user defined exception class must inherit from ApplicationException class
+steps for user defined exception :
+
+1. create an UDF exception class inheriting from Application exception
+2. In the constructor accept a string message and pass it to the base class
+3. Ensure the UDF  exception is thrown at a logical point
+4. Handle the thrown exception
+
+Equality Check : Equals(), ==
+Both are used to compare two value type data or reference type data.
+The == operator compares the reference identity, while the Equals() compares only the contents
+
+Garbage Collection: Occurs if atleast one of the multiple conditions are satisfied. Conditions are as below:
+
+1. If the system has low physical memory, then garbage collection is necessary
+2. If the memory allocated to various objects in the heap exceeds a preset threshold, then garbage collection ocuurs
+3. If GC.Collect() method is called, then garbage collection occurs.
+
+Phases in Garbage Collection
+ 1. Marking Phase : A list of all live objects is created 
+during this phase
+ 2. Relocating Phase : All live objects are updated in this phase, so that they point to the new location
+ 3. Compacting Phase : All the dead objects will be released, and the remaining live objects are moved
+
+Generations of Garbage Collection
+1. Generation 0 : Newly allocated objects(Short Lived Objects)
+2. Generation 1 : Objects left out after GC of 0
+3. Generation 2 : Objects left out after GC of 1 (long Lived Objects)

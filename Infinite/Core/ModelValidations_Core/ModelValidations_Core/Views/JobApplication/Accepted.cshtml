@@ -1,0 +1,30 @@
+﻿@model JobApplication
+@{
+    ViewData["Title"] = "Accepted";
+}
+
+<h1>Accepted</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>Name is :</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Date Of Birth is :</th>
+        <td>@Model.DOB.ToString("d")</td>
+    </tr>
+    <tr>
+        <th>Gender is :</th>
+        <td>@Model.Gender</td>
+    </tr>
+    <tr>
+        <th>Experience is :</th>
+        <td>@Model.Experience</td>
+    </tr>
+    <tr>
+        <th>Have You accepted terms:</th>
+        <td>@Model.TermsAccept</td>
+    </tr>
+</table>
+<a class="btn btn-success" asp-action="Index">Back</a>
+

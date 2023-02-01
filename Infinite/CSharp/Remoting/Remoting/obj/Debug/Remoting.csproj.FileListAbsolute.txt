@@ -1,0 +1,6 @@
+C:\Banu\Infinite\CSharp\Remoting\Remoting\bin\Debug\Remoting.exe.config
+C:\Banu\Infinite\CSharp\Remoting\Remoting\bin\Debug\Remoting.exe
+C:\Banu\Infinite\CSharp\Remoting\Remoting\bin\Debug\Remoting.pdb
+C:\Banu\Infinite\CSharp\Remoting\Remoting\obj\Debug\Remoting.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite\CSharp\Remoting\Remoting\obj\Debug\Remoting.exe
+C:\Banu\Infinite\CSharp\Remoting\Remoting\obj\Debug\Remoting.pdb

@@ -1,0 +1,40 @@
+ASP.Net MVC : Is a very popular framework for developing web applications
+
+-It is the next generation technology and is the successor of ASP.net WebForms
+
+MVC - Model View Controller based architecture
+- It has clear seperation of concerns
+- It is light weight, fast and secure
+- Designs and codes are neatly seperated
+- It uses pure HTML controls through HTMLhelper classes(No Server Control)
+- Is an open source framework
+- It uses Controller based url for routing and navigation
+- Implements no Viewstate
+- It uses Razor engine that supports razor syntax (html + lang code )
+- It uses Layouts in place of Master pages
+
+Model : is responsible for keeping data related information viz database operations/logic, entities and objects
+
+View : is responsible for serving web page (UI) to the client
+
+Controller : is responsible for Business Logic/Programming Logic. Controls the request/response
+
+
+Controllers Action Methods : 
+-All action methods have to be public
+-It cannot be overloaded
+-It cannot be static method
+-Every controller should have atleast one action method called as Index() that returns the view page
+-ActionResult is the base class for all action methods types
+
+Types of Action methods: 
+------------------------
+   ViewResult - Represents HTML and Razor
+   EmptyResult - Represents no result
+   RedirectResult - Represenst a redirection to a new url
+   JsonResult - Represents JSON result (ajax appln)
+   ContentResult - Represents a text
+   File - FileContentResult,FileStreamResult,FilePathResult
+   PartialViewResult - Another View Result in the current view 
+   RedirectToAction - Represents redirection to an action method either of the same controller or different controller
+

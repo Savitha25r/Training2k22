@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>This is Index View of Demo Controller</h2>
+<p> Note : View Bag and ViewData are not displayed in other requests</p>
+<h2>@ViewBag.data1</h2>
+<h2>@ViewData["data2"]</h2>
+
+<h2> Note : TempData Values can be made available in other requests</h2>
+@foreach(var item in Model)
+            {
+                <p>@item</p>
+            }
+

@@ -1,0 +1,66 @@
+Serialization : 
+
+MetaData - Data about Data
+
+Attributes or Annotations or Decorators (classes that provide additional inputs for a particular process/event/task etc.)
+
+JSON : is simple texual representation of data, that acts as common messaging/exchange of data across applications over the net.
+
+It is a key value pair set of data 
+
+{"key" : "value" / value   }
+
+
+Task: Is a provision for creating asynchronous programming
+It is a set of Rich classes and functions under Task Parallel Library (TPL)
+
+Task Object is typically executed asynchronously on a thread pool, rather tah synchronously on the main thread
+
+Task Scheduler is responsible for starting and managing the task
+
+Language Enhancements: 
+
+C#2.0   - done
+  - Static Classes
+  - Property Acessors
+  - Nullable Types
+  - Partial Types
+
+C#3.0
+  - Implicitly Typed Variables   - done
+  - Anonymous Types   - done
+  - Object/Collection Initializers  - done
+  - Extension methods
+  - Lambda Expressions
+  - Query Expressions
+
+C#4.0, 4.5, 5.0
+  - Named and Optional Parameters- done
+  - CoVariance   - done
+  - Task Parallel Library  - done
+  - Async Await    - done
+  - Literal Movement  - done
+
+C#6.0
+  - Using Static - done
+  - Auto property Initializers  - done
+  - Exception Filters
+  - Null conditional Operator (null coalescing) - done
+  - Expression Bodied Methods
+  - String Interpolation    - done
+
+C#7.0
+  - Tuples
+  - Local Functions  - done
+  - Throw Expressions
+
+1. Anonymous Types
+2. #3 usages of the using keyword
+     1. To include a namespace
+     2. To Create a Block of statements and objects 
+     3. To include static classes
+3. Local Functions:If we want to execute a piece of code multiple times within a method, then such codes can be written as an inner function
+4. Literal Movements: Literals are type of data (alphabets, numbers, alphanumeric, symbols) To enhance readability of data (esp numbers/binary), we can use a _ (digit separator)
+5. Named, Optional and Default Parameters
+
+ 

@@ -1,0 +1,71 @@
+URL Routing : A routing table gets created that maps all the controllers action methods to corresponding views.
+
+An entry for all actionable methods with their views if any will be made in the routing table
+
+All [NonAction] methods will not have an entry in the routing table, and hence cannot be called/invoke
+
+
+Custom Segment Routing : creating our own routing to be followed
+
+IgnoreRoute: Is to inform that we dont need any routing for some resources as they do not belong to any action methods. They have to be accessed with the path specifications
+
+
+Views: The views folder keeps a seperate folder for each controller and within the folder, keeps different .cshtml pages for all action methods that belong to that controller
+-The .cshtml file has the html design layout which is used to display and render pages on to the users computer/browser
+-It has the same name as that of the Controller
+
+Razor Syntax: Is a powerful and easiest way to write server based(application) code directly into the view pages
+-Razor is a markup syntax that allows us to embed C# (prog code) code into the view pages using @{ .. } block
+-All code statements end with a semicolon (;)
+-Keep all the string values within double quotes (" ")
+-Use Html markup for adding html codes inside the razor block
+-All expressions like variable/functions start with @
+-Comments in Razor
+  @*
+--
+--
+*@
+-Intellisense support is provided during razor syntax
+@model : To access the Model Data
+
+Passing Information/Data from Controllers to Views
+
+ViewBag, ViewData, TempData
+
+ViewBag : Dynamic DataType
+  - is used to pass data from controllers to views
+  - has short life, means once it passes the value from controller to view, it becomes null
+  - does not require typecasting
+
+Example: to create 
+ViewBag.Mydata="This is My Data"; 
+
+and to access the above in the view page
+@ViewBag.Mydata
+
+
+ViewData : Dictionaty Object
+-Is Derived from ViewDataDictionary
+-Is used to transfer data from controllers to views
+-Once data is sent, it becomes null
+-Is a key Value Pair
+-It requires typecasting for complex data
+
+Example :
+ViewData["Mydata"]="Hello World";
+
+and to access in the view
+@ViewData["Mydata"]
+
+TempData : is a Dictionary Object.
+-Is Derived from TempDataDictionary class
+-It uses Session to store values internally
+-It can be alive for subsequent request. We can retain the state by using TempData.Keep() method for further requests
+-It is good to check for null before using Tempdata, to avoid runtime errors
+-It is most useful when we need to redirect to another page along with some information
+-It is used to transfer data/value/information from one controller to another.
+
+
+Model Binding : 
+ Binding a model to the view using @model
+

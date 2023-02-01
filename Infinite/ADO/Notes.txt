@@ -1,0 +1,65 @@
+XML: Extended/Extensible mark up Lang. (SGML  standard - standard generalized mark up lang)
+
+-XML tags are used to store and organize data, rather than specifying how to display the data like html
+
+- 3 important features of xml
+  - XML i sextensible - allows to create our own descriptive tags
+  - XML carries the data and not the presentation aspects
+  - XML is a public standard(opensource of W3 Consortium)
+
+Xml works behind the screen to exchange data between systems, applications, networks etc. 
+
+eg : 
+<mydata>
+ <text>Hello Xml </text> or <text hello world />
+</mydata>
+
+Rules for Xml Document
+
+1. XML declaration
+  <?xml version="1.0" encoding="utf-8" ?>
+ declaration is case sensitive
+
+2. Xml Tags and elements
+
+<element>
+...
+...
+</element>
+
+3. Attributes (name and value combination - name are not in quotation, whereas values are always in quotation)
+4. References :
+  &
+#3e3e3e
+Xml Text
+ < - &lt
+& - &amp
+&nbsp, &quot;
+
+Xml Documemt definition can be validated either as a DTD or XSD
+
+DTD : Document Type Definition
+
+ <?xml version="1.0" encoding="utf-8" ?>
+<!doctype employee info "emp.dtd">
+<employee>
+ <Id>1</Id>
+ <firstname>Banu</firstname>
+ <lastname>Rekha</lastname>
+ <email>banu@gmail.com</email>
+</employee>
+
+
+
+XSD : Xml Schema Definition
+
+<?xml version="1.0"?>
+<employee
+xmlns="http"//www.inifinite.com"
+xmlns:xsi="http://www,W3.org/2001/XMLSchema-instance"
+xsi:SchemnalLocation=http"//www.inifinite.com emp.xsd">
+ <Id>1</Id>
+ <firstname>Banu</firstname>
+ <lastname>Rekha</lastname>
+ <email>banu@gmail.com</email>
+</employee>

@@ -1,0 +1,63 @@
+2d-3d
+
+Webkit is a html/css web browser rendering engine
+
+IE Engine : Trident
+css prefix = ms
+
+Edge Engine - Blink3
+css prefix =ms
+
+Firefox Engine :Gecko
+css prefix = moz
+
+Opera engine :presto-> Blink1
+css prefix = -o and -webkit
+
+for safari, chrome etc
+@-webkit-keyframes : A keyframe defines the style that will be applied for that moment within the animation
+
+for standard browsers
+@keyframes
+
+HTML 5 tags
+
+header, footer, nav,section, article
+
+
+JavaScript :  
+----------
+Easy to use programing/scripting lang, which can be embedded in the header or body element of the web page.
+-Performs calculations,validations, special effects, graphics etc..
+- Is a scripting lang that helps in making html pages live
+-invented by Brendan Eich
+
+
+Limitations of javascript : cant read/write to hard disk files, and call other programs
+-Does not have any multithreading or multiprocessor capabilities
+
+DOM (Document Object Model)
+document.bgcolor=red;
+
+Events: mouseevents (onmouseover, onfocus,onBlur,onClick,obDblClick)
+
+To use javascript, use <script>  </script>
+
+-3 types :
+1. internal java script
+<script>
+        alert("Hello World..")
+        </script>
+
+2. External Javascript
+ <script src="c:/myscripts.js"></script>
+
+3. Inline java script(mostly used along with events)
+<a href="aa.html" onClick="alert("Hello aLL..)";>click me</a>
+
+
+Java Scripts Displays data as below
+1. window.alert()- a message dialog box
+2. document.write() - over writes all content in the page
+3. innerHTML() - writing into an html element
+4. console.log() - used in browsers debugging mode

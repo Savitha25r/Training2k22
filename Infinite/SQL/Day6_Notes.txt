@@ -1,0 +1,93 @@
+Views : are virtual table that depends on the underlying base table
+
+All Theoritically updatable view are not practically updatable
+
+If a view is created from just one underlying table, then insertion is possible (provided the other columns not supplied can take null values)
+
+Normalization : Decomposing a larger complex table into several smaller ones
+
+ - Move from lower normal form to higher normal form
+
+Normal Forms: 
+1NF - First Normal Form
+
+2NF - Second "  "  "
+
+3NF - Third  "  "   "
+
+BCNF, 4NF,5NF
+In practice, 3NF is often good enough
+
+Why Normalization : Redundancy is the root cause for several associated problems with relational schemas
+- Redundancy causes anomalies: insert,update,delete
+- Wastage of space/storage
+
+Using a technique called Functional Dependency, we normalize the tables
+
+Eg Emp - {Eno,Dept,PrjCode,Hours}
+
+1NF : A table is said to be in 1NF, when every row contains exactly one value for each attribute (at the intersection of a row and a column, there should be only one value) 
+
+2NF : A table is already in 1NF
+ - Every non prime attribute is fully functionally dependent on the primary key
+ - Remove all attributes which have partial dependency na dplace them in a seperate table 
+
+Prj {Eno,Prjcode,Hours}
+Emp {Eno,Dept}
+
+
+Eg  : 
+Emp {Eno,Dept,Dept_Head}
+
+3NF: A table is already in 2nF
+ - No non prime attribute is transitively dependant on the primary key
+ -Remove all attributes which are not directly dependant on the primary key, and are only transitively dependant
+
+a=b=c
+
+Project {Eno,Prjcode,Hours}
+Emp {Eno,Dept}
+Dept {Dept,DeptHead}
+
+to get data from 2 unrelated tables, we use an intermediate table and join and fetch the data as below:
+
+select Prjcode,Hours,DeptHead  from					
+Project join Emp on Project.Eno=Emp.Eno join Dept on Emp.Dept=Dept.Dept					
+
+------------------------------------------------------------
+ADO.Net : Is a bridge between the front end and the back end database. It is a part of the framework that encapsulates all the data access operations, hiding the details of movement of data 
+
+-ADO stands for Activex Data Objets
+-ADO.Net is a database technology of the .Net Framework that is used to connect the application and database server
+-ADO.net consists of a set of classes that can handle data acess
+-ADO.net uses XML to store and transfer data between applications
+
+ADO.Net architecture is of 2 types
+1. Connected Arch. :  The application remains connected with the database throughout the processing
+
+2. Disconnected Arch. : The application automatically connects/disconnects during the procesing. It uses a temporary data on the application side called as DataSet
+
+Common Classe of the ADO.Net
+
+1. Connection : Class used to connect to the database. This class manages transactions and connection pooling
+
+2. Command  : Class that provides methods to store, execute Sql statements and procedures. few important Functions of the command class
+
+    - ExecuteReader() - Returns rows and cols as a DataReader object. Typically used with sql select command
+    - ExecuteNonQuery() - Returns an integer type. Used with Sql DML statements (insert,update,delete)
+    - ExecuteScalar() - Returns one scalar datatype. Can be used with aggregates
+
+3. DataReader : Is used to retrieve the data
+
+4. DataAdapter : 
+5. DataSet
+
+ADO.Net supports all data sources (SQL,MySql,Oracle etc.. + non database sources like XML)
+
+
+
+
+ 
+
+
+

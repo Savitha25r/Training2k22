@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Staticroot\css\site.css" />
+    <Content Include="Staticroot\favicon.ico" />
+    <Content Include="Staticroot\js\site.js" />
+    <Content Include="Staticroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="Staticroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="Staticroot\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="Staticroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="Staticroot\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="Staticroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="Staticroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="Staticroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Staticroot\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Staticroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Staticroot\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Staticroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="Staticroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="Staticroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="Staticroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="Staticroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Staticroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Staticroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="Staticroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Staticroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="Staticroot\lib\bootstrap\LICENSE" />
+    <Content Include="Staticroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="Staticroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Staticroot\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="Staticroot\lib\jquery-validation\dist\additional-methods.js" />
+    <Content Include="Staticroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="Staticroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="Staticroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="Staticroot\lib\jquery-validation\LICENSE.md" />
+    <Content Include="Staticroot\lib\jquery\dist\jquery.js" />
+    <Content Include="Staticroot\lib\jquery\dist\jquery.min.js" />
+    <Content Include="Staticroot\lib\jquery\dist\jquery.min.map" />
+    <Content Include="Staticroot\lib\jquery\LICENSE.txt" />
+    <Content Include="Staticroot\MyPage.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+</Project>

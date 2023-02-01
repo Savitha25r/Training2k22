@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<body>
+    <h1>Parsing Text as Javascript Object Using JSON.parse()</h1>
+    <p id="test"></p>
+    
+    <script>
+        /*1. parsing to objects
+        const mydata='{"Name":"Divyasree","City":"Bangalore","Salary":45000}'
+        //var str="Hello"
+        const myobj=JSON.parse(mydata);
+        document.getElementById("test").innerHTML="Name:" + myobj.Name + " ," +myobj.City + ","+myobj.Salary;
+        
+        /* 2. stringify
+        data=JSON.stringify(myobj);
+        document.write(data);*/
+        /* 3. Replacer in stringify */
+        var obj={"name":"nandini","age":15,"City":"Delhi"};
+        var text=JSON.stringify(obj,function(key,value){
+            if(key=="name"){
+                return value.toUpperCase();
+            }
+            else{
+                return value;
+            }
+        });
+        document.getElementById("test").innerHTML=text;
+    </script>
+    
+</body>
